@@ -1,0 +1,30 @@
+{
+  "project_manifest_sha256": "d0448c279a962f1c4eb019d1ab9d23a379ecc7b9e508089d898557e13bde8807",
+  "revision": "0e308fde7f5358da4f4543f5208f239f0b03d0dd",
+  "cpu_files": 134,
+  "overlays": {
+    "core/config.v": "core/config.v",
+    "core/e203_clkgate.v": "core/e203_clkgate.v",
+    "core/e203_dtcm_ram.v": "core/e203_dtcm_ram.v",
+    "core/e203_exu_decode.v": "core/e203_exu_decode.v",
+    "core/e203_itcm_ram.v": "core/e203_itcm_ram.v"
+  },
+  "bytes": 12742,
+  "sha256": "50829f600a6386d3dc64038535ed4a4e9b53612ce9aa148776ae57c75cacdd69",
+  "parts": 22,
+  "self_test": {
+    "passed": true,
+    "CPU_files": 134,
+    "source_unchanged": true,
+    "config_overlay_audited": true,
+    "audited_reference_files": 5,
+    "idempotent": true,
+    "other_mismatch_no_partial_import": true,
+    "destination_conflict_refused": true,
+    "wrong_manifest_refused": true,
+    "corrupt_reference_refused": true,
+    "python36_syntax": true
+  },
+  "transfer_reconstruction_checked": true,
+  "server_import_verified": false
+}

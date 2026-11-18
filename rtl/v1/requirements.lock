@@ -1,0 +1,4 @@
+# Validation host. Python 3.10.9; tools remain local to the project.
+numpy==1.26.2
+verilator==5.48.0
+ziglang==0.13.0

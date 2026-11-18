@@ -1,0 +1,86 @@
+{
+  "bytes": 19968,
+  "sha256": "553d9052a74ada8730bf56ab17f0a0f72c3e31b9cc3a9c2f228a17df048cb93b",
+  "chunks": 25,
+  "base_revision": "4dc49f795480e6c8430dc307f3700c6d82b73137",
+  "revision": "fc04cb66be9b85b222895528d6a79714a4d5f465",
+  "changed": [
+    "flow/README.md",
+    "flow/dc.tcl",
+    "flow/project.py",
+    "flow/pt.tcl"
+  ],
+  "old_manifest": "242839456366f11c900cf8dfbdb3465267d834a4d5f6b6d932fb76a140f67d6c",
+  "new_manifest": "728cba186141af2a1dc34f4c390a8a7c17ec85eb0645837c90d16e520326e22d",
+  "reported_server_failure": {
+    "first_error": "setenv KWT_PDK_ROOT before running this flow",
+    "PDK_env_empty": true,
+    "SRAM_env_present": true,
+    "failed_run_valid_for_PPA": false
+  },
+  "checks": {
+    "guards": {
+      "passed": true,
+      "source_chunks": 62,
+      "archives_verified": 2,
+      "source_fixture_import": true,
+      "python36_syntax": true,
+      "modified_source_rejected": true,
+      "stale_netlist_rejected": true,
+      "unmapped_netlist_rejected": true,
+      "missing_env_rejected": true,
+      "missing_library_rejected": true,
+      "synthetic_guard_checks_only": true,
+      "EDA_execution": false
+    },
+    "tcl_faults": {
+      "passed": true,
+      "fault_cases": {
+        "missing_env": [
+          ""
+        ],
+        "analyze": [
+          "work",
+          "analyze"
+        ],
+        "link": [
+          "work",
+          "analyze",
+          "elaborate",
+          "link"
+        ],
+        "compile": [
+          "work",
+          "analyze",
+          "elaborate",
+          "link",
+          "compile"
+        ],
+        "generic": [
+          "work",
+          "analyze",
+          "elaborate",
+          "link",
+          "compile"
+        ]
+      },
+      "EDA_execution": false,
+      "scope": "standard Tcl with mocked tool commands; actual DC retry required"
+    },
+    "installer": {
+      "passed": true,
+      "python36_syntax": true,
+      "failed_build_preserved": true,
+      "manifest_verified": true,
+      "idempotence": true,
+      "RTL_unchanged": true,
+      "EDA_execution": false
+    }
+  },
+  "evidence_sha256": {
+    "testdata/clean_flowfix_checks_20261111/summary.json": "371e48a584b4e8ffd912a12596b8a6900ab564f823de8e172214a0195b41c957",
+    "testdata/clean_flowfix_tcl_20261111/summary.json": "32ad3dea5451f8487cd974d7f206bf415c6b720f7611e647f3914bc495e5bf92",
+    "testdata/clean_flowfix_apply_20261111/summary.json": "15d53c9bb80c5eebb7ddab2ceb25079cb113f46a939741cb82321eb493af2e8e",
+    "testdata/clean_flowfix_apply_20261111/apply.log": "78d85b305933414018388d46e28a8a510384cebea97ce9eaeece7282c412300d"
+  }
+}

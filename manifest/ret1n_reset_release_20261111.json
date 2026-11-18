@@ -1,0 +1,219 @@
+{
+  "bytes": 13153,
+  "sha256": "bfd14b13d724aba33ea63ea64b7eb016a54d97cb4239ea70f97b04ce0a040b0c",
+  "parts": 22,
+  "directory": "kwt_ret1n_reset_68ae931_20261111",
+  "revision": "68ae931394bc06419c50ef72688ac6bd1896c61d",
+  "replaced_or_added": [
+    "flow/README.md",
+    "flow/dc.tcl",
+    "flow/project.py",
+    "flow/pt.tcl",
+    "flow/reset_rules.tcl",
+    "flow/run_candidate.sh",
+    "flow/run_gate.sh",
+    "flow/run_sram_contract.sh",
+    "flow/sram_contract_ret1n.v",
+    "flow/tb_sram_contract.sv",
+    "rtl/integration/smic40/kwt_tech_sram_4096x16.sv"
+  ],
+  "removed": [
+    "flow/sram_contract_9pin.v"
+  ],
+  "files": 63,
+  "target_manifest_sha256": "6eb552084575baa7933b4542f6735a04e9a59b918a5ad2b4f846fa181275a34e",
+  "development_dirty": false,
+  "release_package_checks": {
+    "passed": true,
+    "source_chunks": 63,
+    "archives_verified": 2,
+    "source_fixture_import": true,
+    "python36_syntax": true,
+    "modified_source_rejected": true,
+    "stale_netlist_rejected": true,
+    "unmapped_netlist_rejected": true,
+    "RET1N_open_or_low_rejected": true,
+    "missing_env_rejected": true,
+    "missing_library_rejected": true,
+    "synthetic_guard_checks_only": true,
+    "EDA_execution": false
+  },
+  "release_installer_checks": {
+    "passed": true,
+    "copied_verified_source_only": true,
+    "old_build_excluded": true,
+    "parent_unchanged": true,
+    "numerical_RTL_unchanged": true,
+    "original_SDC_unchanged": true,
+    "manifest_matches_target": true,
+    "fresh_project_source_check": true,
+    "existing_candidate_refused": true,
+    "corrupt_delta_rejected": true,
+    "source_drift_rejected": true,
+    "transfer_reconstruction": true,
+    "python36": true,
+    "real_vendor_macro_or_synthesis_executed": false
+  },
+  "release_control_flow_checks": {
+    "passed": true,
+    "fault_cases": {
+      "missing_env": [
+        ""
+      ],
+      "min_library": [
+        "work"
+      ],
+      "analyze": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze"
+      ],
+      "link": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link"
+      ],
+      "ret1n": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link"
+      ],
+      "reset_cone": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold"
+      ],
+      "compile": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile"
+      ],
+      "compile_reset": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile"
+      ],
+      "compile_hold": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "compile"
+      ],
+      "generic": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "compile"
+      ],
+      "normal": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "compile",
+        "export",
+        "write",
+        "write",
+        "sdc"
+      ]
+    },
+    "PT_bound_macro_tests": {
+      "pt_normal": {
+        "updates": 3,
+        "completion": true
+      },
+      "pt_ret1n": {
+        "updates": 1,
+        "completion": false
+      },
+      "pt_link": {
+        "updates": 0,
+        "completion": false
+      }
+    },
+    "EDA_execution": false,
+    "scope": "standard Tcl with mocked tool commands; actual DC retry required"
+  },
+  "vendor_contract_pass": false,
+  "synthesis_completed": false,
+  "physical_signoff": false,
+  "candidate_area_mm2": null,
+  "candidate_power_mW": null,
+  "full_soc_power_mW": null,
+  "full_soc_area_mm2": null
+}

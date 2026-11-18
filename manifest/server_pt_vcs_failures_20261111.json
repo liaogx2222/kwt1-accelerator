@@ -1,0 +1,39 @@
+{
+  "deadline": "2026-11-13 24:00 Asia/Shanghai",
+  "deadline_ISO": "2026-11-14T00:00:00+08:00",
+  "scope": "user supplied screenshots, actual reports not copied locally",
+  "PT": {
+    "SS_link_succeeded": true,
+    "SS_macro_count": 20,
+    "run_finished_with_errors": true,
+    "diagnostic_errors": 3,
+    "diagnostic_warnings": 3,
+    "root_cause": null,
+    "first_error_context_requested": true,
+    "STA_accepted": false
+  },
+  "SoC_VCS": {
+    "compile_failed": true,
+    "errors": [
+      "IND done used before declaration at TB line79",
+      "IND host_en used before declaration at TB line80"
+    ],
+    "executed_network": false,
+    "fix_commit": "7f71e6ce8fb08e8052c443bc17e33d6f2e5f45ac",
+    "fixed_server_compile_verified": false
+  },
+  "DC_completed": true,
+  "DC_structural_provenance_check": true,
+  "mapped_numerical_function_verified": false,
+  "physical_signoff": false,
+  "soc_power_mW": null,
+  "soc_energy_uJ": null,
+  "complete_soc_area_mm2": null,
+  "accelerator_partition_area_mm2": 0.969021816158,
+  "soc_conditional_task_s_at_150MHz": 12.481838924365048,
+  "screenshot_sha256": {
+    "pt_started": "14d58cae83e7edb410fb3d7421b5daa54884acc1a4ac885f88c2a4f0662e1cbf",
+    "vcs_failure": "516323328227007996e4d3c2eb2a60a7b893cecce80f242fd3bd8732994668e0",
+    "pt_error_summary": "9b380c44beb849f0cc456f1cfbebad384c85f40770bb5916cc9336bf1bd00a02"
+  }
+}

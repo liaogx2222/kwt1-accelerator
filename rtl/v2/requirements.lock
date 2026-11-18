@@ -1,0 +1,10 @@
+# Validation host. Python 3.10.9; tools remain local to the project.
+numpy==1.26.2
+verilator==5.48.0
+ziglang==0.13.0
+# Separate tools/rtl_v2_python target (YoWASP Yosys 0.69 git 9f75ca1f9).
+yowasp-yosys==0.69.0.0.post1233
+yowasp-runtime==1.96
+wasmtime==47.0.1
+click==8.5.0
+platformdirs==4.12.4

@@ -1,0 +1,151 @@
+{
+  "format": 1,
+  "keyword_transformer_git_base": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+  "e203_git_base": "9f3e34f337f5d0a1236a285871ffa2032491617a",
+  "active_candidate": "compact-e203-softmax-radix4-v2",
+  "preferred_attention_leaf": "compact-softmax-recip-v1",
+  "versions": {
+    "compact-ln2-drain": {
+      "status": "accepted predecessor",
+      "evidence": "testdata/input16_rtl_20261105/p3_e203_compact_ln2_drain/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p3_e203_compact_ln2_drain/manifest.json",
+      "manifest_sha256": "0c2d1a8508a1a011204fde41866b449cf1a14f9169f1e459c01aaf6238c451e4"
+    },
+    "compact-forward-v3": {
+      "parent": "compact-ln2-drain",
+      "status": "accepted cross-layer projection partition",
+      "evidence": "testdata/input16_rtl_20261105/p4_e203_compact_forward_v3/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_e203_compact_forward_v3/manifest.json",
+      "manifest_sha256": "641c75042ee91347bd26026f5903f34a322420d34df42fcc966f95195bcbd84a",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_ln2_forward.sv",
+        "rtl/block_transfer/compact_ln2_forward_probe.hpp",
+        "scripts/run_e203_compact_forward.py"
+      ]
+    },
+    "compact-qkv-resident-v4": {
+      "parent": "compact-forward-v3",
+      "status": "accepted E203 resident-Q/K/V partition",
+      "evidence": "testdata/input16_rtl_20261105/p4_e203_compact_qkv_resident_v4/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_e203_compact_qkv_resident_v4/manifest.json",
+      "manifest_sha256": "f06685aeedb7d769da25afff4984f3906d3a26eaea928b3ec5fd50a7fa80ad34",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_qkv_resident.sv",
+        "rtl/block_transfer/compact_qkv_resident_probe.hpp",
+        "scripts/run_e203_compact_qkv_resident.py"
+      ]
+    },
+    "compact-qk-feed-v2": {
+      "parent": "compact-qkv-resident-v4",
+      "status": "accepted standalone QK SRAM-to-MAC consumer, pending E203 integration",
+      "evidence": "testdata/input16_rtl_20261105/p4_compact_qk_feed_v2/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_compact_qk_feed_v2/manifest.json",
+      "manifest_sha256": "ded0f931c4c3214529dcb20b59d053591679aa740c658a3daf2a620dc158708c",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_qk_feed.sv",
+        "rtl/block_transfer/tb_compact_qk_feed.sv",
+        "scripts/verify_compact_qk_feed.py"
+      ]
+    },
+    "compact-shared-qk-v1": {
+      "parent": "compact-qkv-resident-v4",
+      "status": "accepted E203 shared MAC QK partition",
+      "evidence": "testdata/input16_rtl_20261105/p4_e203_compact_shared_qk_v1/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_e203_compact_shared_qk_v1/manifest.json",
+      "manifest_sha256": "604abeec98a14f04caf40fd285afd6c42347266275b4ec0b44d1a4e218377f98",
+      "sources_added": [
+        "rtl/block_transfer/compact_qk_integrated_probe.hpp",
+        "scripts/run_e203_compact_shared_qk.py"
+      ]
+    },
+    "compact-shared-qk-ready-v1": {
+      "parent": "compact-shared-qk-v1",
+      "status": "same model, always-ready test consumer",
+      "evidence": "testdata/input16_rtl_20261105/p4_e203_compact_shared_qk_ready_v1/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_e203_compact_shared_qk_ready_v1/manifest.json",
+      "manifest_sha256": "a48d74068ef49db4c401ab69da76b6fd74b5bacd66f24037ec6f906142ded1d7"
+    },
+    "compact-qk-score-store-v3": {
+      "parent": "compact-shared-qk-v1",
+      "status": "accepted standalone physical B score storage, pending E203 integration",
+      "evidence": "testdata/input16_rtl_20261105/p4_compact_qk_score_store_v3/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_compact_qk_score_store_v3/manifest.json",
+      "manifest_sha256": "76ae5f6dec346557681a82d30a98053486dd70de5ed273e2abb1bf912e5aad35",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_qk_score_store.sv",
+        "rtl/block_transfer/tb_compact_qk_score_store.sv",
+        "scripts/verify_compact_qk_score_store.py"
+      ]
+    },
+    "compact-softmax-from-b-v1": {
+      "parent": "compact-qk-score-store-v3",
+      "uses": ["compact-softmax-storage-v2"],
+      "status": "accepted standalone B-to-Softmax chain, pending E203 integration",
+      "evidence": "testdata/input16_rtl_20261105/p4_compact_softmax_from_b_v1/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_compact_softmax_from_b_v1/manifest.json",
+      "manifest_sha256": "ed22fb967c5ef742237eff722e7989e423270aade5565560faca088e64498fe1"
+    },
+    "compact-e203-softmax-v3": {
+      "parent": "compact-shared-qk-v1",
+      "uses": ["compact-softmax-from-b-v1"],
+      "status": "accepted E203 QK-to-Softmax with legacy reciprocal",
+      "evidence": "testdata/input16_rtl_20261105/p4_e203_compact_softmax_v3/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_e203_compact_softmax_v3/manifest.json",
+      "manifest_sha256": "56648e2cd2c44d893f2ba01eba3638f06a796f3e152d8fbf89460f9bea59c903",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_qk_softmax.sv",
+        "rtl/block_transfer/compact_softmax_integrated_probe.hpp",
+        "scripts/run_e203_compact_softmax.py"
+      ]
+    },
+    "compact-softmax-recip-v1": {
+      "parent": "compact-softmax-from-b-v1",
+      "status": "accepted standalone bounded radix-4 reciprocal variant",
+      "evidence": "testdata/input16_rtl_20261105/p4_compact_softmax_recip_v1/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_compact_softmax_recip_v1/manifest.json",
+      "manifest_sha256": "0ca0b256996bb29dcf20524d0b20b2ebffb1f349b50d26d93b90f2b4bf2e615f",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_softmax_recip.sv",
+        "scripts/verify_compact_softmax_recip.py"
+      ]
+    },
+    "compact-e203-softmax-radix4-v2": {
+      "parent": "compact-e203-softmax-v3",
+      "uses": ["compact-softmax-recip-v1"],
+      "status": "accepted E203 QK-to-Softmax with bounded radix-4 reciprocal",
+      "evidence": "testdata/input16_rtl_20261105/p4_e203_compact_softmax_radix4_v2/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_e203_compact_softmax_radix4_v2/manifest.json",
+      "manifest_sha256": "ac047877412b8ba75a964f23b2319db45eed6bcd26f0d2a423b57a149e626d97",
+      "sources_added": ["scripts/run_e203_compact_softmax_radix4.py"]
+    },
+    "compact-softmax-row-v1": {
+      "status": "accepted standalone component, pending integration",
+      "evidence": "testdata/input16_rtl_20261105/p4_compact_softmax_row_v1/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_compact_softmax_row_v1/manifest.json",
+      "manifest_sha256": "e7bf71feb1374355b550dd07b3ed2d506267d8bce3c89776cb48ff93565d11d0",
+      "sources_added": [
+        "rtl/block_transfer/kwt_compact_softmax_row.sv",
+        "rtl/block_transfer/tb_compact_softmax_row.sv",
+        "scripts/verify_compact_softmax_row.py",
+        "flow/compact_softmax_row_nangate45.ys"
+      ]
+    },
+    "compact-softmax-storage-v2": {
+      "parent": "compact-softmax-row-v1",
+      "status": "accepted standalone one-array variant, pending integration",
+      "evidence": "testdata/input16_rtl_20261105/p4_compact_softmax_storage_v2/verification.json",
+      "manifest": "testdata/input16_rtl_20261105/p4_compact_softmax_storage_v2/manifest.json",
+      "manifest_sha256": "0c14e7c7e2e98de6ee68083d02a3c2e84d5c262f62cda43b44ce5cf84dbc10db",
+      "sources_added": [
+        "scripts/compare_compact_softmax_storage.py",
+        "testdata/input16_rtl_20261105/p4_compact_softmax_storage_v2/kwt_compact_softmax_row.sv"
+      ]
+    }
+  },
+  "rules": [
+    "Use a fresh output directory for each run and keep previous manifests intact.",
+    "Resolve source_sha256 against the repository root, including inherited parent artifacts and the E203 source.",
+    "Compact versions and the separate trim2 reference must not share performance, power or area totals.",
+    "This records workspace sources and artifact provenance; it is not a Git commit."
+  ]
+}

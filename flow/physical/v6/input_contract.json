@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "project": "kwt_physical_v6_20261115",
+  "status": "TT_libraries_and_link_passed_floorplan_seed_setup_failed_SDC_iterator_and_site_match",
+  "goal": "SMIC40 complete digital SoC physical implementation and complete merged layout",
+  "top": "kwt_soc_joint",
+  "reference": {
+    "server_project": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_sysbus_v1_20261113_r3",
+    "candidate_relative": "review_tools/timing_closure_v6/finish_vt",
+    "netlist_relative": "dc/mapped.v",
+    "netlist_sha256": "f38a79d45a1ad939eb056d7b12f1da747d6755183315e3b5a2cd1b932c2f5506",
+    "measured_reference_manifest": "manifest/v6_finish_vt_reference_20261114.json",
+    "provenance_note": "Reference results are synthesis-level evidence; they are not physical implementation results."
+  },
+  "logic_policy": {
+    "initial_configuration": "Preserve frozen v6 functionality, numerical format and FPGA_SOURCE clock-gate bypass configuration",
+    "accuracy_drop_limit_percentage_points": 0.1,
+    "rtl_edit_authorized_in_this_flow": false,
+    "physical_optimization_requires_equivalence_and_function_checks": true,
+    "hold_fix_in_physical_stage": true,
+    "clock_gating_reconfiguration": "Separate candidate and functional evidence required",
+    "dft_scan_insertion": "Unresolved system requirement; no automatic insertion"
+  },
+  "macro_inventory": {
+    "reference_cell": "RAMSP4096X16",
+    "total": 100,
+    "private": 20,
+    "shared": 64,
+    "ITCM": 8,
+    "DTCM": 8,
+    "all_macros_physically_required": true,
+    "current_LEF_and_GDS_coverage_verified": false,
+    "current_LEF_width_um": 135.58,
+    "current_LEF_height_um": 202.96,
+    "current_LEF_nominal_area_per_macro_um2": 27517.3168,
+    "current_LEF_nominal_area_all_100_mm2": 2.75173168,
+    "current_LEF_power_pins": [
+      "VDDPE",
+      "VDDCE"
+    ],
+    "current_LEF_ground_pins": [
+      "VSSE"
+    ],
+    "SRAM_layout_identified": true,
+    "SRAM_layout_path": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/gds/RAMSP4096X16.gds2",
+    "SRAM_layout_bytes": 5148672,
+    "SRAM_layout_header_verified": true,
+    "SRAM_layout_structure_verified": false,
+    "SRAM_GDS_structure_gate_passed_inferred_from_worker_order": true,
+    "SRAM_GDS_structure_report_received": false,
+    "SRAM_layout_definitely_absent": false,
+    "geometry_evidence": "docs/architecture/evidence/physical_binding_20261115/screenshot_transcription.json"
+  },
+  "implementation_targets": {
+    "hfclk_MHz": 150,
+    "frequency_is_target_not_signoff": true,
+    "core_area_mm2": null,
+    "die_area_mm2": null,
+    "PVT_and_RC_scenarios": "Bind to available, matching SMIC40 releases after resource and constraint audit",
+    "power_nets": null,
+    "metal_stack": null,
+    "tool_and_version": null,
+    "license_checkout_verified": false
+  },
+  "discovered_tool_candidates": {
+    "implementation": "ICC2 2022.03-SP2-1",
+    "extraction": "StarRC 2020.09-SP5-2",
+    "physical_verification": "IC Validator 2021.06-SP3-9",
+    "evidence": "docs/architecture/evidence/physical_preflight_20261115/screenshot_transcription.json",
+    "actual_batch_entry_verified": true,
+    "ICC2_batch_entry": "shell_batch_entry_passed",
+    "LM_batch_entry": "same_release_ICC2_bin_via_declared_bin_sh_passed",
+    "LM_error_evidence": "docs/architecture/evidence/physical_diagnostic_20261115/screenshot_transcription.json",
+    "pilot_library_technology": "vendor scc40nll_vhs_7lm_1tm.tf, compatibility trial only",
+    "pilot_NDM_created": true,
+    "pilot_NDM_success_confirmed": true,
+    "v2_final_result_received": false,
+    "v3_final_result_received": true,
+    "v3_source_run": "libprep_v3_20261115_100036_768815",
+    "four_library_native_commit_and_reopen": "passed",
+    "initial_SoC_design_import_and_link": "passed",
+    "v3_success_evidence": "docs/architecture/evidence/physical_native_commit_20261115/screenshot_transcription.json",
+    "library_warning_examples_review_complete": false,
+    "pilot_NDM_result_evidence": "docs/architecture/evidence/physical_libprep_20261115/screenshot_transcription.json",
+    "common_technology_failure": {
+      "section": "DensityRule",
+      "line": 3906,
+      "codes": [
+        "TECH-229",
+        "LIB-007"
+      ],
+      "source_context_received": true,
+      "root_cause": "M2 DensityRule lacks closing brace in blank line3905 before M3 starts at3906",
+      "repair_prepared": "one ASCII closing brace inserted into private copy; all original bytes and line numbers preserved",
+      "repair_applied_on_server": true,
+      "repair_location": "private libprep_v2 run; vendor PDK unchanged",
+      "patched_technology_import_verified": true,
+      "technology_gate_returncode": 0,
+      "technology_gate_warnings": 10,
+      "rules_relaxed_or_removed": false,
+      "source_evidence": "docs/architecture/evidence/physical_tech_review_20261115/screenshot_transcription.json"
+    },
+    "selected_stack": null,
+    "library_warning_examples_received": true
+  },
+  "next_run": {
+    "entry": "deliverables/physical_seed_setup_review_20261115",
+    "steps": [
+      "read existing failed setup site table and vendor metadata",
+      "prepare equivalent uncertainty SDC and exact diff in new directory",
+      "review actual native site names and dimensions before any retry"
+    ],
+    "server_execution_started": false,
+    "CAD_started": false,
+    "site_repair_prepared": false,
+    "SDC_compatibility_rewrite_prepared": true,
+    "constraints_applied": false,
+    "source_databases_modified": false,
+    "server_site_information_required": true,
+    "execution_on_hold_by_user": true
+  },
+  "initial_layout_scope": {
+    "complete_digital_SoC_block": true,
+    "pads_ESD_and_package": "Separate full-chip scope pending actual libraries and interface requirements",
+    "analog_PLL": "Not included in the frozen digital netlist implementation scope",
+    "tapeout_signoff_claim": false
+  },
+  "known_gaps": {
+    "unconstrained_max_delay_endpoints": 28,
+    "UART_data_latch_D": 24,
+    "AON_async_preset": 2,
+    "deglitch_first_stage_D": 2,
+    "reference_coverage_hold_violations": 611,
+    "reference_coverage_removal_violations": 4,
+    "clock_relationship_and_disabled_arc_review_pending": true,
+    "SRAM_power_and_parasitic_model_review_pending": true,
+    "macro_and_standard_cell_pin_access_review_pending": true
+  },
+  "delivery_targets": [
+    "native implementation database and DEF",
+    "complete merged GDSII or supported OASIS including cell and macro layouts",
+    "matching final netlist SDC SPEF SDF",
+    "multi-scenario STA and constraint/CDC/RDC review evidence",
+    "physical verification and available power-integrity reports with explicit coverage",
+    "post-layout functional checks and same-task-window PPA",
+    "tool/library/input/output provenance and hashes"
+  ],
+  "last_floorplan_seed_run": {
+    "entry": "deliverables/physical_floorplan_seed_20261115",
+    "steps": [
+      "archive warning examples and verify frozen sources",
+      "clone linked design and import exact original plus inference SDC",
+      "set physical directions/site only from vendor and NDM metadata",
+      "initialize experimental digital block boundary and grouped 100-macro seed",
+      "export DEF/database and independently verify native macro/row geometry"
+    ],
+    "custom_empty_return_assertion_removed": true,
+    "native_workspace_checks_relaxed": false,
+    "server_execution_started": true,
+    "remaining_technology_warning_review": [
+      "ALPA minArea",
+      "LayerDataType references129/159",
+      "fatWireViaEncCutNameTbl"
+    ],
+    "constraints_and_floorplan_applied": false,
+    "trial_boundary_scope": "complete digital SoC block excluding pads/ESD/analog PLL",
+    "trial_boundary_um": [
+      0,
+      0,
+      2500,
+      2500
+    ],
+    "trial_core_offset_um": 30,
+    "trial_macro_keepout_um": 5,
+    "reference_SDC_command_sha256": "8ef50221531310c670ed749db8bca7b84f27c0ad4619c56304ff3d45372c93f6",
+    "inference_mode_command_sha256": "4e25fdaf27369302fa35ce000d937287152ad5fd3db6b37a7b696ffd9f635f97",
+    "final_area_or_PPA_claim": false,
+    "server_run": "floorplan_seed_v1_20261115_113214_286911",
+    "result": "setup failed; constraints partially read; no floorplan",
+    "evidence": "docs/architecture/evidence/physical_floorplan_seed_20261115/screenshot_transcription.json",
+    "native_site_match_count": null
+  },
+  "workflow_state": "paused_by_user_for_LN4_server_intake_20261115",
+  "site_review_evidence": "docs/architecture/evidence/physical_seed_site_review_20261115/transcription.json"
+}

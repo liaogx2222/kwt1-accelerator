@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-11",
+  "deadline": "2026-11-13 24:00 Asia/Shanghai",
+  "source_scope": "user server screenshots; raw binary/log/report hashes not retrieved in this update",
+  "SoC": {
+    "reference_source_revision": "7f71e6ce8fb08e8052c443bc17e33d6f2e5f45ac",
+    "engine": "server VCS Q-2020.03-SP2",
+    "case": 0,
+    "full_twelve_layers": true,
+    "output_words": 1584,
+    "output_S8_codes": 6336,
+    "mismatches": 0,
+    "packets": 13,
+    "sysper_reads": 116379,
+    "sysper_writes": 190941,
+    "bus_errors_observed": false,
+    "cycles": 12017466,
+    "completion_wrapper": "SOC_VCS_CASE_VERIFIED 0",
+    "runtime_CPU_seconds": 115.72,
+    "boundary": "first host write through CPU completion marker store response",
+    "conditional_task_s_at_150MHz": 12.481832692516043,
+    "conditional_ms_at_150MHz": 80.11644,
+    "numerical_function_accepted_for_case0": true,
+    "all_12_development_cases_VCS_accepted": false,
+    "clock_gating": "FPGA_SOURCE functional bypass; upstream PLL passthrough",
+    "physical_150MHz_signed_off": false,
+    "difference_from_native_cycles": 6,
+    "difference_explanation": "not trace-resolved; separate engine/clock-start-phase baselines retained",
+    "transaction_count_scope": "whole SV testbench simulation, including ID/startup accesses before first host write; distinct from task cycle window"
+  },
+  "PT": {
+    "original_redirect_error_confirmed": "unknown command 'report_area' (CMD-005)",
+    "review1_full_timing_updates": 3,
+    "review1_summary_warnings": 8,
+    "review1_summary_informationals": 54,
+    "review1_errors_listed_in_summary": false,
+    "review1_completion_file_checked": false,
+    "full_setup_hold_coverage_review_pending": true,
+    "STA_accepted": false
+  },
+  "DC": {
+    "mapped_review_reports_done": true,
+    "mapped_macro_count": 20,
+    "mapped_check_design_body_received": false,
+    "hold_path": {
+      "startpoint": "abort_hw input",
+      "endpoint": "last_flag_reg/D",
+      "type": "min/hold",
+      "corner": "SS",
+      "data_arrival_ns": 0.11,
+      "hold_uncertainty_ns": 0.15,
+      "library_hold_ns": 0.08,
+      "required_ns": 0.23,
+      "slack_ns": -0.12
+    },
+    "SoC_abort_hw_actual_constant": 0,
+    "general_interface_hold_requirement_waived": false,
+    "accelerator_total_cell_area_mm2": 0.969021816158
+  },
+  "soc_power_mW": null,
+  "soc_energy_uJ": null,
+  "full_soc_area_mm2": null,
+  "screenshot_sha256": {
+    "area_error_hold_path": "2c45741a57e1cddb0b86e759c7e85b645dcb223d1690342a5acc577e9ea717a2",
+    "soc_case0_PASS": "421b7fc38ea695d9293b33c5b963b793a1f5e6b6fef3ef3de1414338d859a452",
+    "PT_and_mapped_DC_exit": "04b5919fa65b944457a3bfe05068c887cdd523d6a9d57ce6a58ce6cc196e7309"
+  }
+}

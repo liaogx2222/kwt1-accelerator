@@ -1,0 +1,43 @@
+{
+  "source_manifest_sha256": "f731ed1f26e7cf4b74df948e283261183ff7bff8f2928a67f132e8748171c55e",
+  "review_sha256": {
+    "pt_review.tcl": "2d73688dc17f7813b1d5b43c7cff0b86d51d55d0e4f48f89899a1d3b07e923ca",
+    "dc_mapped_review.tcl": "071329a2ed80fb9df76730868e9da033fce7e83603e97ecf5ab955b3ecca1720",
+    "run_pt_review.sh": "f68b8b1ed8dfe50c0362a307f784aa2112b14b945ac07eba2f4a37b8c97ff999"
+  },
+  "bytes": 2644,
+  "sha256": "c8b641594549090b509b517490b869c3e4ae3ef1cf60e802504e29e4cf0a0faf",
+  "parts": 5,
+  "local_control_flow_and_installer_checks": {
+    "passed": true,
+    "source_59_files_unchanged": true,
+    "netlist_unchanged": true,
+    "original_PT_preserved": true,
+    "idempotent_installer": true,
+    "transport_reconstruction": true,
+    "mock_Tcl_three_corners": true,
+    "initial_empty_remove_avoided": true,
+    "no_PT_report_area": true,
+    "existing_report_directory_refused": true,
+    "report_failure_stops_without_completion": true,
+    "post_mapping_DC_flow_mocked": true,
+    "python36_syntax": true,
+    "actual_DC_PT_executed": false,
+    "actual_SoC_VCS_pass": false
+  },
+  "shell_syntax_checked": true,
+  "server_execution_verified": false,
+  "redirected_error_audit_checks": {
+    "passed": true,
+    "echoed_completion_rejected": true,
+    "summary_only_errors_detected": true,
+    "first_error_context": true,
+    "blackbox_rejected": true,
+    "generic_rejected": true,
+    "wrong_macro_count_rejected": true,
+    "changed_source_detected": true,
+    "redirected_error_detected": true,
+    "no_automatic_physical_PASS": true,
+    "real_server_reports_reviewed": false
+  }
+}

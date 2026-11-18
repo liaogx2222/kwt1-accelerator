@@ -1,0 +1,25 @@
+{
+  "original_sources_sha256": {
+    "apply_pdf_comments.py": "37610e6b3d18536f658ab0633f8892d9b9bf745793da649c36e642cca1dfcbc1",
+    "archive_and_check.py": "b01d77f7f4f49279ff22feae11621bc57599ee2b8bbdbb0646e07f63197aab53",
+    "build.py": "9446e7a19fdd44a833aad936c9eb9cbdafa0032c7ea7bb33e4aa4b39a5df3f10",
+    "current.py": "6faac126a9c719ef554eef0a20b2e0c04cba9329f17d221af208aaf9a5926b32",
+    "docx_kit.py": "b535972ddaa1001923a89ade956956ccd22659dc5e1f317eca85bd2158283807",
+    "export_pdf.py": "f4bfc1e4c1943b2177b931fc98a93746608dc566129e87d7da06d3c4a0ead341",
+    "export_word.ps1": "4164d292248e794e7d689f0634da0ae3dd454b3e435543d8f4d1fc4a3f677de4",
+    "facts.py": "00e46e6448aa44db9ccbb5784f09f72519912275a412b305ff705eb180503824",
+    "fig_banks.png": "863a725e7e60cce1dc81a1ad0d8ec548af45f5e6f0843b0e9c8837af28c9b83c",
+    "fig_soc.png": "4cc89f22b3127431a1819bbeade55f7389a48f9b2d0e4cda1e3dabfa24a6cd31",
+    "make_figures.py": "e5b20202b4b42024107f92b96887fc3fae1b227323050046d41ee7718da9a204",
+    "part1.py": "9b627b3dc1787ff084f408da7baeb70feade9a064d24696bf91aeda746a3aae2",
+    "part2.py": "95bc5f0628764563f5c48ad5388c17f0ac687f22c314888ba020fa19331dc81c",
+    "part4.py": "e80ca0d2bbf5a18f328804d0f08c2019403a08c91bd62606143c3b1381b35e6d",
+    "refine_report_tone.py": "dc2a6851c4edfc907524781c4624ea9fa0ebacf2798359072b6bc4617a526e31",
+    "refresh_source.py": "ba6a20ffa593351369e43e4524ea7e3044a62c18c5f165d55518c41e0844d5c0",
+    "render_review.py": "681aeaedbe04f848e98d4213b69c995c362f61a2441aa02f028f3f1d7d951a7a"
+  },
+  "original_preserved": true,
+  "timing_claim": "TT original r3 has violations; target-frequency performance only",
+  "timing_ECO_results_not_qualified": true,
+  "power_for_this_version_not_obtained": true
+}

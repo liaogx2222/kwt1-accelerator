@@ -1,0 +1,29 @@
+{
+  "project_manifest_sha256": "d0448c279a962f1c4eb019d1ab9d23a379ecc7b9e508089d898557e13bde8807",
+  "revision": "0e308fde7f5358da4f4543f5208f239f0b03d0dd",
+  "cpu_files": 134,
+  "bytes": 2643,
+  "sha256": "d0ff65d73a9a193b709f72fab00432a9804320a32104bb5dde9622fc6d81a519",
+  "parts": 5,
+  "self_test": {
+    "passed": true,
+    "CPU_files": 134,
+    "source_unchanged": true,
+    "config_overlay_audited": true,
+    "idempotent": true,
+    "other_mismatch_no_partial_import": true,
+    "destination_conflict_refused": true,
+    "wrong_manifest_refused": true,
+    "python36_syntax": true
+  },
+  "server_observation": {
+    "SoC_archive_transfer_verified": true,
+    "accelerator_import_files": 11,
+    "fixtures_import_files": 37,
+    "CPU_import": "rejected at core/config.v, atomic importer copied no CPU files",
+    "SoC_source_check": false,
+    "VCS_started": false,
+    "DC_finished": "not observed in supplied screenshot"
+  },
+  "screenshot_sha256": "03189e33c936ed7f336e66ca28a2e8c70040b49a29fc7d914b74836371c60ac9"
+}

@@ -1,0 +1,6 @@
+read_verilog rtl/integration/proof_sanity.sv
+proc
+equiv_make sanity_gold sanity_gate sanity
+hierarchy -top sanity
+equiv_simple
+equiv_status -assert

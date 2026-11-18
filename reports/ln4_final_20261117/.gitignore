@@ -1,0 +1,4 @@
+__pycache__/
+qa/pages/
+qa/temp/
+qa/contact_*.png

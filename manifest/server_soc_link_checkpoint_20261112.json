@@ -1,0 +1,20 @@
+{
+  "evidence": "user screenshot codex-clipboard-3d46885d-1142-466d-9ccb-ee05ec65798d.png",
+  "scope": "SoC structural link checkpoint, not final mapped SoC or timing signoff",
+  "accelerator_reference": "kwt1_mmio_frozen_ref",
+  "CPU_cache_used": true,
+  "physical_macros": {"private":20,"shared":64,"ITCM":8,"DTCM":8,"total":100},
+  "final_link_succeeded_observed": true,
+  "linked_checkpoint": "build/link_probe_v2/linked_soc.ddc",
+  "checkpoint_written_observed": true,
+  "probe_PASS_marker_observed": true,
+  "clean_tool_run": false,
+  "native_error": "Error: Value for list clock_list must have 1 elements. (CMD-036)",
+  "error_count_observed": 1,
+  "elapsed_seconds": 92,
+  "next_stage": "reapply unchanged clock budgets using empty-collection-safe cleanup and per-clock uncertainty, require zero tool/report errors before mapping only remaining glue",
+  "CPU_and_accelerator_resynthesis_required": false,
+  "whole_SoC_area_mm2": null,
+  "whole_SoC_power_mW": null,
+  "energy_uJ": null
+}

@@ -1,0 +1,23 @@
+{
+  "evidence": "user screenshot codex-clipboard-fddba6ca-7f2e-4425-9b35-ae0adefdf350.png",
+  "server_project": "kwt_ret1n_reset_2b2dc17_20261111",
+  "run_directory": "build/gate/c0_resume_20261112",
+  "case": 0,
+  "gate_functional_pass_observed": true,
+  "output_words_compared": 1584,
+  "output_word_mismatches": 0,
+  "hardware_reported_cycles": 5765882,
+  "cycles_not_asserted_full_SoC_end_to_end": true,
+  "SAIF_write_message_observed": true,
+  "expected_SAIF": "build/gate/c0_resume_20261112/kwt1_gate_c0.saif",
+  "SAIF_file_verified": false,
+  "observation": "screenshot f7053b5c shows VCS Warning-[SAIF_REPORT_ARG_CHECK], Incorrect argument specification, Invalid first argument when trying to report SAIF information to a file; actual task SAIF not generated",
+  "SAIF_argument_warning_confirmed": true,
+  "legacy_filename_argument_type": "reg [8191:0] fn",
+  "functional_pass_not_power_ready": true,
+  "power_started": false,
+  "power_mW": null,
+  "energy_uJ": null,
+  "complete_gate_wrapper_receipt_confirmed": false,
+  "scope": "old S8 accelerator case0 zero-delay gate functional result, not input16 or complete SoC PPA"
+}

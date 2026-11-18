@@ -1,0 +1,30 @@
+{
+  "evidence": [
+    "user screenshot 2282f9ec-34e3-456d-99a6-bc9bb3190b36",
+    "user screenshot 3b3581d2-1c1c-4ffa-9666-fc0e9f8ea6c8",
+    "user screenshot 5135570c-bc6f-40e4-83bb-bfff2b5f3a74"
+  ],
+  "RTL_revision": "595724b88858b142a407f6a5c4761945252d523b",
+  "server_project": "kwt_parallel_max_20261112_input16_595724b/input16_fast",
+  "clean_synthesis_done_observed": true,
+  "GTECH_cells": 0,
+  "SELECT_OP_cells": 0,
+  "private_SRAM_macros": 20,
+  "total_cell_area_library_units": 1415581.016315,
+  "macro_area_library_units": 550346.328125,
+  "accelerator_total_area_mm2": 1.415581016315,
+  "private_SRAM_area_mm2": 0.550346328125,
+  "standard_cell_area_mm2": 0.86523468819,
+  "elapsed_seconds": 25617,
+  "CPU_seconds": 30179,
+  "scope": "input16 mapped accelerator plus private SRAM, excludes CPU/NICE outside accelerator/TCM/shared SRAM and platform glue",
+  "whole_SoC_area_mm2": null,
+  "whole_SoC_power_mW": null,
+  "energy_uJ": null,
+  "new_input16_gate_pass_confirmed": false,
+  "new_input16_TT_timing_signoff_confirmed": false,
+  "integration_status": "SoC DC failed after launching; exact error not yet received. grep first matched source-echo SOC_FATAL, not the runtime diagnostic. Frozen accelerator DDC loaded 59 designs.",
+  "precision_drop_pp_existing_4445_sample_evidence": 0.06749156355455568,
+  "native_RTL_cycles_existing_evidence": 2407590,
+  "throughput_at_assumed_150MHz_existing_evidence": 62.30296686728222
+}

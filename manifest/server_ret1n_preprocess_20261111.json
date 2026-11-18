@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-11",
+  "source": "user screenshot",
+  "project": "kwt_ret1n_reset_68ae931_20261111",
+  "observed_stage": "Presto HDL frontend compilation of kwt_layer_banked completed successfully",
+  "observed_server_module_timestamp": "Wed Nov 11 18:28:13 2026",
+  "complete_synthesis": false,
+  "final_netlist_received": false,
+  "physical_signoff": false,
+  "vendor_contract_receipt_observed": false,
+  "vendor_contract_inference": "entry sequence requires vendor contract before DC, but actual receipt still to retrieve",
+  "transfer_update": "user confirms FTP available; direct archive transfer now allowed",
+  "screenshot_sha256": "e1e6da2fe86687f741dfc041360ab1da837fc4affe2c479c438a29b8ae864528"
+}

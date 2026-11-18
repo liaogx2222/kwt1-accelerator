@@ -1,0 +1,33 @@
+{
+  "revision": "ccba68c40a6d9dc4c3fbe7ae0613860f8d8b4012",
+  "development_dirty": false,
+  "files": 197,
+  "cpu_files": 134,
+  "bytes": 34764,
+  "sha256": "3fb84b66afb56c89b686b10fbbe9e5d0f34cf47022afbb0b604f9dbae3b5b634",
+  "parts": 58,
+  "full_bytes": 1323696,
+  "full_sha256": "b0533174ef638dfb72d7c9b08100a492ae3357fd0d6db0ca2e6f469338d4b7e4",
+  "ROM_bytes": 572,
+  "package_checks": {
+    "passed": true,
+    "relocated_import": true,
+    "CRLF_normalization": true,
+    "source_tamper_rejected": true,
+    "unique_actual_ROM": true,
+    "python36": true,
+    "EDA_execution": false
+  },
+  "timed_crosscheck": {
+    "passed": true,
+    "case": 0,
+    "words": 1584,
+    "cycles": 12017465,
+    "engine": "Verilator event-driven, not server VCS",
+    "endpoint": "this compiled TB ends at completion marker request; release TB counts response consumption",
+    "compiled_TB_snapshot": "testdata\\soc_joint_timed_acceptance_20261111\\compiled_source\\tb_soc_joint.sv",
+    "compiled_TB_sha256": "cdc0b8eb263c4b047ac1694579101cd80fba75bca30210d0beda33a9a13a45f9",
+    "log_sha256": "c8876aa7401365fb8241e113aa5ac4e244ac25acd8196333724f65c1bc0757ed"
+  },
+  "server_VCS_verified": false
+}

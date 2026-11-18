@@ -1,0 +1,197 @@
+{
+  "status": "measured_reference_cold_and_reset_recovery_passed_pending_coverage_and_model_review",
+  "candidate": "review_tools/timing_closure_v6/finish_vt",
+  "netlist_sha256": "f38a79d45a1ad939eb056d7b12f1da747d6755183315e3b5a2cd1b932c2f5506",
+  "SAIF_sha256": "d08fe90e6459b9ee8dfa49ec0c5854f4ddc3d5887a43dea8d14368f9dc735db2",
+  "evidence": "docs/architecture/evidence/v6_power_20261114/metrics_and_warnings_transcription.json",
+  "metrics": {
+    "candidate": "review_tools/timing_closure_v6/finish_vt",
+    "netlist_sha256": "f38a79d45a1ad939eb056d7b12f1da747d6755183315e3b5a2cd1b932c2f5506",
+    "case": 0,
+    "tasks": 1,
+    "scope": "complete digital SoC; TT synthesis-level averaged power with fresh gate SAIF",
+    "PVT": {
+      "corner": "TT",
+      "voltage_V": 1.1,
+      "temperature_C": 25,
+      "frequency_MHz": 150,
+      "debug_straps": "111"
+    },
+    "gate": {
+      "cycles": 2783869,
+      "params": 189328,
+      "input_words": 3168,
+      "output_words": 1584,
+      "host_words": 192508,
+      "SAIF_duration_seconds": "0.01855915814",
+      "output_mismatches": 0,
+      "SAIF_sha256": "d08fe90e6459b9ee8dfa49ec0c5854f4ddc3d5887a43dea8d14368f9dc735db2"
+    },
+    "throughput_task_s": "53.88184573340197",
+    "latency_ms": "18.559126666666668",
+    "switching_power_mW": "7.719",
+    "internal_power_mW": "59.8",
+    "dynamic_power_mW": "67.51899999999999",
+    "leakage_power_mW": "0.49229999999999996",
+    "average_power_mW": "68.01129999999999",
+    "energy_uJ_per_task": "1262.2324720069819",
+    "whole_SoC_cell_and_macro_area_mm2": "3.748500986801",
+    "macro_area_mm2": "2.751731640625",
+    "conservative_scored_area_mm2": "1.9873927368009998",
+    "scored_area_basis": "whole SoC minus 64 shared macros only; all 100 macros are RAMSP4096X16",
+    "macros": {
+      "total": 100,
+      "private": 20,
+      "shared": 64,
+      "ITCM": 8,
+      "DTCM": 8
+    },
+    "nets_direct_activity_file_percent": "100.0",
+    "activity_review_required": false,
+    "setup_and_recovery": [
+      {
+        "group": "**async_default** (max_delay/setup)",
+        "WNS_ns": "1.81",
+        "TNS_ns": "0.0",
+        "violations": 0
+      },
+      {
+        "group": "hfclk (max_delay/setup)",
+        "WNS_ns": "0.05",
+        "TNS_ns": "0.0",
+        "violations": 0
+      },
+      {
+        "group": "jtagclk (max_delay/setup)",
+        "WNS_ns": "4.48",
+        "TNS_ns": "0.0",
+        "violations": 0
+      },
+      {
+        "group": "lfclk (max_delay/setup)",
+        "WNS_ns": "30511.01",
+        "TNS_ns": "0.0",
+        "violations": 0
+      }
+    ],
+    "same_task_window_verified": true,
+    "hold_fix": "deferred to physical implementation by user",
+    "includes": "CPU, NICE, original System Bus, added logic, ROM, TCM and all private/shared SRAM",
+    "excludes": "analog PLL/pads and off-chip equipment",
+    "timing_checks_in_gate": false,
+    "post_layout": false,
+    "SDF_annotated": false,
+    "twelve_case_gate_campaign": false,
+    "report_directory": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_sysbus_v1_20261113_r3/review_tools/v6_power_v1_20261113_180332/pt_20261114_092344",
+    "interconnect_and_SRAM_power_review_required": true
+  },
+  "qualification": {
+    "cold_case0_same_netlist_pass": true,
+    "same_netlist_setup_recovery_reported_groups_pass": true,
+    "same_netlist_area_and_task_power_obtained": true,
+    "SAIF_direct_annotation_100_percent": true,
+    "v6_reset_recovery_evidence_received": true,
+    "CDC_and_disabled_arcs_review_complete": false,
+    "power_model_range_checks_review_complete": false,
+    "hold_fixed": false,
+    "full_backend_signoff": false,
+    "v6_reset_recovery_started": true,
+    "v6_reset_recovery_passed_by_completion_guard": true,
+    "v6_reset_recovery_result_JSON_received": true,
+    "v6_reset_recovery_same_cycles_as_cold": true,
+    "v6_reset_recovery_raw_file_downloaded": false
+  },
+  "warnings": {
+    "total": 22,
+    "PTE_003": {
+      "count": 1,
+      "meaning": "timing arcs disabled for timing-loop breaking or constant propagation; need report_disable_timing review"
+    },
+    "PTE_052": {
+      "count": 1,
+      "meaning": "clock waveform expansion/common base-period limits; some inter-clock paths may be unconstrained",
+      "cross_clock_coverage_review_required": true
+    },
+    "PWR_278": {
+      "count": 20,
+      "meaning": "empty hierarchical cells including bypass clock gates, FIFOs, debug and peripheral wrappers; compare configuration and netlist before accepting"
+    }
+  },
+  "frozen_format_and_parameters_unchanged": true,
+  "hold_fix_deferred_by_user": true,
+  "not_a_full_backend_signoff": true,
+  "coverage_review": {
+    "evidence": "docs/architecture/evidence/v6_power_20261114/postcheck_coverage_transcription.json",
+    "unconstrained_max_delay_endpoints": 28,
+    "checks": {
+      "total": 239149,
+      "met": 217411,
+      "violated": 615,
+      "untested": 21123
+    },
+    "setup_untested": 1049,
+    "recovery_untested": 2,
+    "hold_violations": 611,
+    "removal_violations": 4,
+    "complete_STA_coverage": false,
+    "power_load_range_warning_lines": 1795,
+    "power_ramp_range_warning_lines": 240,
+    "endpoint_categories": {
+      "total": 28,
+      "uart_fifo_tx_data_D": {
+        "count": 24,
+        "UARTs": [
+          0,
+          1,
+          2
+        ],
+        "bits_each": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "aon_async_set_pins": {
+        "count": 2,
+        "pin": "SDN",
+        "register_group": "ERST reset capture"
+      },
+      "aon_deglitch_first_stage": {
+        "count": 2,
+        "names": [
+          "dwakeup_deglitch/T_8_reg/D",
+          "bootrom_deglitch/T_8_reg/D"
+        ]
+      },
+      "accelerator_datapath_names_in_list": 0,
+      "no_automatic_exception_accepted": true
+    },
+    "UART_latch_confirmed": {
+      "library_cell": "LAHQV0_12TH40",
+      "enable": "fifo_tx_valid",
+      "source_identity_verified": true,
+      "endpoint_count": 24,
+      "unconstrained_status_not_cleared": true,
+      "evidence": "docs/architecture/evidence/v6_power_20261114/uart_latch_and_source_identity.json"
+    }
+  },
+  "recovery_receipt": {
+    "evidence": "docs/architecture/evidence/v6_recovery_20261115/result_json_screenshot_transcription.json",
+    "completion_CST": "2026-11-15 09:53:00 +0800",
+    "stage": "v6_reset_recovery_passed_CDC_and_model_review_remain",
+    "result_path": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_sysbus_v1_20261113_r3/review_tools/v6_power_v1_20261113_180332/postcheck_v1/recovery/result.json",
+    "same_cycles_as_cold": true,
+    "successful_task_cycles": 2783869,
+    "scope": "one in-flight reset followed by complete case0 cold recovery; complete result JSON content received as screenshot",
+    "status_evidence": "docs/architecture/evidence/v6_recovery_20261115/completion_status_transcription.json",
+    "SAIF_sha256": "dbd07b04030a5fcb6a651db606d074b11d2bc2146b7e8e83f3b00b4df3764b39",
+    "cold_metrics_sha256": "9acc69d753d11e448cc54b588a8ca53465be2fd191ff79c5e270829db45287eb",
+    "passed": true,
+    "output_mismatches": 0
+  }
+}

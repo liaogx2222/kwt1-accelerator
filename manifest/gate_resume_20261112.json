@@ -1,0 +1,15 @@
+{
+  "source_revision": "fb37bd94ab1f7fc68dd5241ffc7f8278d1e43671",
+  "installer_bytes": 2489,
+  "installer_sha256": "4f4f581bafa3cee995e5d893ca5fc74b7f61ac8f274f0d30e4e34d4cabfc14bc",
+  "parts": 3,
+  "commands": 6,
+  "requires_source_revision": "2b2dc17",
+  "changes_frozen_files": false,
+  "recompiles_model": false,
+  "transport_reconstruction_verified": true,
+  "Python36_syntax": true,
+  "source_netlist": "03f13dbce8d789ea169585154d5cb3e854099dd549194fe722b0a064ac971c40",
+  "local_mock_summary_sha256": "b5081dc51d6439db6a14d90682ab65eefc1e93061e11df7be1ae6ed5709ab3da",
+  "actual_server_executed": false
+}

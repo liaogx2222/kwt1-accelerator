@@ -1,0 +1,220 @@
+{
+  "macro_contract": {
+    "passed": true,
+    "normal_access_contract_checks": 5,
+    "low_RET1N_rejected": true,
+    "zero_initialization_contract_checks": 5,
+    "four_state_X_behavior_executed": false,
+    "actual_RET1N_port_binding_compiled": true,
+    "vendor_macro_executed": false,
+    "formal_retention_low_mode_supported": false,
+    "source_sha256": {
+      "E:\\project\\ChipCompetition\\keyword-transformer\\rtl\\integration\\smic40\\kwt_tech_sram_4096x16.sv": "f50fc1f122d91ff74d757da172ea73a1d3faa69d4286f9f611e6e54958105116",
+      "E:\\project\\ChipCompetition\\keyword-transformer\\flow\\review\\ramsp4096x16_ret1n.v": "9c2dc65efd69ed4696bc4de17fc3d98683b0f39c68143bfef589804427e82cc9",
+      "E:\\project\\ChipCompetition\\keyword-transformer\\testdata\\ret1n_contract_ready_20261111\\tb_ret1n.sv": "79acfe3760370f802c4b73fb3b4b70c54dddd3fa94a7006e947fd07871d7c26d"
+    }
+  },
+  "package_migration": {
+    "passed": true,
+    "source_chunks": 63,
+    "archives_verified": 2,
+    "source_fixture_import": true,
+    "python36_syntax": true,
+    "modified_source_rejected": true,
+    "stale_netlist_rejected": true,
+    "unmapped_netlist_rejected": true,
+    "RET1N_open_or_low_rejected": true,
+    "missing_env_rejected": true,
+    "missing_library_rejected": true,
+    "synthetic_guard_checks_only": true,
+    "EDA_execution": false
+  },
+  "flow_control": {
+    "passed": true,
+    "fault_cases": {
+      "missing_env": [
+        ""
+      ],
+      "min_library": [
+        "work"
+      ],
+      "analyze": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze"
+      ],
+      "link": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link"
+      ],
+      "ret1n": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link"
+      ],
+      "reset_cone": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold"
+      ],
+      "compile": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile"
+      ],
+      "compile_reset": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile"
+      ],
+      "compile_hold": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "compile"
+      ],
+      "generic": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "compile"
+      ],
+      "normal": [
+        "work",
+        "min_library",
+        "min_library",
+        "min_library",
+        "min_library",
+        "analyze",
+        "elaborate",
+        "link",
+        "fix_hold",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "reset_fanout",
+        "reset_transition",
+        "compile",
+        "compile",
+        "export",
+        "write",
+        "write",
+        "sdc"
+      ]
+    },
+    "PT_bound_macro_tests": {
+      "pt_normal": {
+        "updates": 3,
+        "completion": true
+      },
+      "pt_ret1n": {
+        "updates": 1,
+        "completion": false
+      },
+      "pt_link": {
+        "updates": 0,
+        "completion": false
+      }
+    },
+    "EDA_execution": false,
+    "scope": "standard Tcl with mocked tool commands; actual DC retry required"
+  },
+  "candidate_copy": {
+    "passed": true,
+    "copied_verified_source_only": true,
+    "old_build_excluded": true,
+    "parent_unchanged": true,
+    "numerical_RTL_unchanged": true,
+    "original_SDC_unchanged": true,
+    "manifest_matches_target": true,
+    "fresh_project_source_check": true,
+    "existing_candidate_refused": true,
+    "corrupt_delta_rejected": true,
+    "source_drift_rejected": true,
+    "transfer_reconstruction": true,
+    "python36": true,
+    "real_vendor_macro_or_synthesis_executed": false
+  },
+  "soc_ret1n_contract_20261111": {
+    "passed": true,
+    "output_codes": 6336,
+    "metrics": "0 12017460 1794217 116377 190941 189328 13 1584 190924",
+    "log_sha256": "cdb7506edb592254c9fcc425a005fd226e73bc5fd57d66566b85dd3241ab05be",
+    "output_sha256": "2bbd334227b5b156b1b964f15ced59d9369e3046d40fb52c502ff2e120026fcf"
+  },
+  "soc_ret1n_zero_20261111": {
+    "passed": true,
+    "output_codes": 6336,
+    "metrics": "0 12017460 1794217 116377 190941 189328 13 1584 190924",
+    "log_sha256": "a8ed16a778b1c5facb189e9447461f018278610b4f277b9fab1d4c82ee6bc687",
+    "output_sha256": "2bbd334227b5b156b1b964f15ced59d9369e3046d40fb52c502ff2e120026fcf"
+  },
+  "scope": "local binary logic and mocked tool control flow; no actual vendor/DC/PT result for new candidate",
+  "actual_vendor_macro_verified": false,
+  "new_candidate_physical_signoff": false
+}

@@ -1,0 +1,7 @@
+help equiv_make
+help equiv_struct
+help equiv_simple
+help equiv_induct
+help expose
+help cutpoint
+help delete

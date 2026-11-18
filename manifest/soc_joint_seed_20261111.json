@@ -1,0 +1,9 @@
+{
+  "source": "existing untracked work preserved; copies reviewed and revised under rtl/soc_joint",
+  "seed_sha256": {
+    "keyword-transformer\\rtl\\integration\\soc\\soc_top.sv": "8fe5df9660e68e63204f3073ef1defab605d8129837ec0e79591cb5485d8cd6f",
+    "keyword-transformer\\rtl\\integration\\soc\\icb2kwt.sv": "7589fd6a0950db031e975d78d26b42b8e09092779a3fb8528cc1582ebf8c7741",
+    "keyword-transformer\\rtl\\integration\\soc\\kwt_shmem.sv": "aa25634cac1088dae4e8011484466dbbc19dce728f27014fbc4ff3fda295115c",
+    "keyword-transformer\\rtl\\integration\\soc\\sirv_mrom_top.v": "c5532a5f7ef465e08a60a1d4e627abfee06bcffd384cdc599be950584577c27f"
+  }
+}

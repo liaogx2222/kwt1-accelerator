@@ -1,0 +1,22 @@
+{
+  "profile": "INPUT16_V1",
+  "parameters_sha256": "9b90642ca9237d108fba7269306afa7fec6283e88733831b9e06106f23d86c2d",
+  "coefficient_words": 1816,
+  "weight_words_per_logical_bank": 6144,
+  "packets": {
+    "common.bin": "7db33f22a358dc2abc724dc3b3f3597a0f892003865036c374ee296c9d77eb56",
+    "layer_00.bin": "fb1cc1ad17a559e4246cd3fd98e7db2da8374369be0f252c0631ffaadd4317dd",
+    "layer_01.bin": "26c438745fc48bfa755432e32b35c0791d0e88ead1c18a096fbf9898fabf3d86",
+    "layer_02.bin": "274051763ea5e5febb2f787b2f038e1bb6e91a24e07e88d3949051240e8ea81f",
+    "layer_03.bin": "164a98de8c6327f6c02fee0f50727045e1126f888bea7d3409e8e45cf47b8305",
+    "layer_04.bin": "7ddc7ba9b1bb4c73a5bec8831ffef9e0861c71527b1e9eb9304d3f5ccce107bb",
+    "layer_05.bin": "5e5d7e9ff4a17fc057665d8c867447bf369c158ba1773232d438f1e7491a4eef",
+    "layer_06.bin": "3f07e329eb039ddf677521e286d4902f93e10728210a50e50b6bd5aa42ae1664",
+    "layer_07.bin": "6a1789f5bcaf0623a028d307bae74351479fd40b8eb23187ae65267de4b433b4",
+    "layer_08.bin": "6ea98b88f9143dfa10e5f49d481a3dc17f7d17728f53cde3874ba549c9271169",
+    "layer_09.bin": "b2459108bd07b525ac77c5284f34ef2b885f78a7ddd58a2206fe7e4036904e26",
+    "layer_10.bin": "4396f0d3fd0294f3891f2d9c1886ac3fb1e1d80ea22e0171b389ae877afd2cdd",
+    "layer_11.bin": "2e61e449b62e118b1d1f2da9ba96e4936601653aebc11c8e5ea699113f03e773"
+  },
+  "ROM_contains": "headers/CRC/layout only; no tensor data or expected outputs"
+}

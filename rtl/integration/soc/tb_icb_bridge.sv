@@ -1,0 +1,256 @@
+// =============================================================================
+// tb_icb_bridge -- stand-alone testbench for icb2kwt + kwt1_mmio
+// -----------------------------------------------------------------------------
+// S1 of the SoC integration plan: prove the ICB bridge BEFORE any CPU, any
+// firmware, any linker script is involved.  If this TB passes, every remaining
+// integration bug is above the bus (soc_top wiring, firmware, boot flow).
+//
+// What is checked (all hard assertions):
+//   T1  read  ACCEL+0x48  -> 0x4B575431        (decode + read path + ID)
+//   T2  read  0x5000_0000 -> rsp_err=1, data=0 (unmapped window is rejected,
+//                                               and is NOT mistaken for START)
+//   T3  read  ACCEL+0x04  -> rsp_err=0         (STATUS is readable; bits are
+//                                               printed, not asserted, because
+//                                               the reset value of the status
+//                                               word is not part of the frozen
+//                                               contract)
+//   T4  write ACCEL+0x0C  -> rsp_err=0         (legal full-word write)
+//   T5  write ACCEL+0x08 with wmask=4'b0001
+//                         -> rsp_err=1         (partial word must be rejected,
+//                                               INTERFACE_CONTRACT.md "只支持
+//                                               完整字写入")
+//   T6  read  ACCEL+0x02  -> rsp_err=1         (unaligned address rejected)
+//
+// Clock: 150 MHz (6.667 ns), the sign-off frequency.
+// SRAM : behavioural model (kwt_sram_sp) because KWT_TECH_SRAM is NOT defined.
+//        KWT_SIM must come from the command line (+define+KWT_SIM), NOT from a
+//        `define here: VCS compiles the file list in order, so a macro defined
+//        in this file would be too late for kwt_sram_sp.sv, and redefining it
+//        would only add a warning.
+// =============================================================================
+`timescale 1ns/1ps
+
+module tb_icb_bridge;
+
+  // ------------------------------------------------------------- clock/reset
+  reg clk   = 1'b0;
+  reg rst_n = 1'b0;
+  always #3.333 clk = ~clk;                 // 150.0 MHz
+
+  localparam [31:0] ACCEL_BASE = 32'h4000_0000;
+
+  integer errors = 0;
+
+  // ------------------------------------------------------ ICB master model
+  reg         m_cmd_valid;
+  wire        m_cmd_ready;
+  reg  [31:0] m_cmd_addr;
+  reg         m_cmd_read;
+  reg  [31:0] m_cmd_wdata;
+  reg  [3:0]  m_cmd_wmask;
+  wire        m_rsp_valid;
+  reg         m_rsp_ready;
+  wire        m_rsp_err;
+  wire [31:0] m_rsp_rdata;
+
+  // -------------------------------------------------- bridge <-> accel bus
+  wire        req_valid, req_ready, req_write;
+  wire [31:0] req_addr, req_wdata;
+  wire [3:0]  req_wstrb;
+  wire        resp_valid, resp_ready, resp_error;
+  wire [31:0] resp_rdata;
+  wire        dec_hit;
+  wire        irq;
+
+  // ------------------------------------------------------------------ bridge
+  icb2kwt #(.BASE_HI(16'h4000)) u_bridge (
+    .clk           (clk),
+    .rst_n         (rst_n),
+    .icb_cmd_valid (m_cmd_valid),
+    .icb_cmd_ready (m_cmd_ready),
+    .icb_cmd_addr  (m_cmd_addr),
+    .icb_cmd_read  (m_cmd_read),
+    .icb_cmd_wdata (m_cmd_wdata),
+    .icb_cmd_wmask (m_cmd_wmask),
+    .icb_rsp_valid (m_rsp_valid),
+    .icb_rsp_ready (m_rsp_ready),
+    .icb_rsp_err   (m_rsp_err),
+    .icb_rsp_rdata (m_rsp_rdata),
+    .req_valid     (req_valid),
+    .req_ready     (req_ready),
+    .req_write     (req_write),
+    .req_addr      (req_addr),
+    .req_wdata     (req_wdata),
+    .req_wstrb     (req_wstrb),
+    .resp_valid    (resp_valid),
+    .resp_ready    (resp_ready),
+    .resp_rdata    (resp_rdata),
+    .resp_error    (resp_error),
+    .dec_hit       (dec_hit)
+  );
+
+  // -------------------------------------------------------------- accelerator
+  kwt1_mmio u_dut (
+    .clk        (clk),
+    .rst_n      (rst_n),
+    .abort_hw   (1'b0),
+    .core_enable(1'b1),
+    .mem_enable (1'b1),
+    .req_valid  (req_valid),
+    .req_ready  (req_ready),
+    .req_write  (req_write),
+    .req_addr   (req_addr),
+    .req_wdata  (req_wdata),
+    .req_wstrb  (req_wstrb),
+    .resp_valid (resp_valid),
+    .resp_ready (resp_ready),
+    .resp_rdata (resp_rdata),
+    .resp_error (resp_error),
+    .irq        (irq)
+  );
+
+  // ---------------------------------------------------------------- ICB xfer
+  // Drive on negedge, sample on posedge: no race with the DUT's flops.
+  task automatic icb_xfer(
+    input  [31:0] addr,
+    input         rd,
+    input  [31:0] wdata,
+    input  [3:0]  wmask,
+    output [31:0] rdata,
+    output        err
+  );
+    begin
+      @(negedge clk);
+      m_cmd_valid = 1'b1;
+      m_cmd_addr  = addr;
+      m_cmd_read  = rd;
+      m_cmd_wdata = wdata;
+      m_cmd_wmask = wmask;
+      @(posedge clk);
+      while (!m_cmd_ready) @(posedge clk);
+      @(negedge clk);
+      m_cmd_valid = 1'b0;
+      m_cmd_addr  = 32'h0;
+      m_cmd_read  = 1'b0;
+      m_cmd_wdata = 32'h0;
+      m_cmd_wmask = 4'h0;
+
+      m_rsp_ready = 1'b1;
+      @(posedge clk);
+      while (!m_rsp_valid) @(posedge clk);
+      rdata = m_rsp_rdata;
+      err   = m_rsp_err;
+      @(negedge clk);
+      m_rsp_ready = 1'b0;
+      @(posedge clk);
+    end
+  endtask
+
+  // ---------------------------------------------------------------- checking
+  reg [31:0] d;
+  reg        e;
+
+  task automatic expect_read(input [31:0] addr, input [31:0] want, input integer tag);
+    begin
+      icb_xfer(addr, 1'b1, 32'h0, 4'hf, d, e);
+      if (e !== 1'b0) begin
+        errors = errors + 1;
+        $display("FAIL T%0d  addr=%08x  unexpected rsp_err=1", tag, addr);
+      end else if (d !== want) begin
+        errors = errors + 1;
+        $display("FAIL T%0d  addr=%08x  got %08x want %08x", tag, addr, d, want);
+      end else begin
+        $display("PASS T%0d  addr=%08x  rdata=%08x", tag, addr, d);
+      end
+    end
+  endtask
+
+  task automatic expect_read_err(input [31:0] addr, input integer tag);
+    begin
+      icb_xfer(addr, 1'b1, 32'h0, 4'hf, d, e);
+      if (e !== 1'b1) begin
+        errors = errors + 1;
+        $display("FAIL T%0d  addr=%08x  expected rsp_err=1, got 0 (rdata=%08x)",
+                 tag, addr, d);
+      end else begin
+        $display("PASS T%0d  addr=%08x  rsp_err=1 rdata=%08x", tag, addr, d);
+      end
+    end
+  endtask
+
+  task automatic expect_write(input [31:0] addr, input [31:0] wdata,
+                              input [3:0] wmask, input want_err, input integer tag);
+    begin
+      icb_xfer(addr, 1'b0, wdata, wmask, d, e);
+      if (e !== want_err) begin
+        errors = errors + 1;
+        $display("FAIL T%0d  addr=%08x wmask=%b  expected rsp_err=%b, got %b",
+                 tag, addr, wmask, want_err, e);
+      end else begin
+        $display("PASS T%0d  addr=%08x wmask=%b  rsp_err=%b", tag, addr, wmask, e);
+      end
+    end
+  endtask
+
+  // -------------------------------------------------------------------- main
+  initial begin
+    m_cmd_valid = 1'b0;
+    m_cmd_addr  = 32'h0;
+    m_cmd_read  = 1'b0;
+    m_cmd_wdata = 32'h0;
+    m_cmd_wmask = 4'h0;
+    m_rsp_ready = 1'b0;
+
+    $display("=== tb_icb_bridge: icb2kwt + kwt1_mmio ===");
+    $display("BASE_HI=0x4000  ACCEL_BASE=0x%08x  clk=150MHz", ACCEL_BASE);
+
+    repeat (8) @(posedge clk);
+    rst_n = 1'b1;
+    repeat (8) @(posedge clk);
+
+    // T1: ID register -- proves decode, read path, response path
+    expect_read(ACCEL_BASE + 32'h48, 32'h4B57_5431, 1);
+
+    // T2: an address outside the window must be rejected, not executed
+    expect_read_err(32'h5000_0000, 2);
+
+    // T3: STATUS readable (value printed, not asserted)
+    icb_xfer(ACCEL_BASE + 32'h04, 1'b1, 32'h0, 4'hf, d, e);
+    if (e !== 1'b0) begin
+      errors = errors + 1;
+      $display("FAIL T3  STATUS read got rsp_err=1");
+    end else begin
+      $display("PASS T3  STATUS=%08x  busy=%b done=%b err=%b common=%b input=%b layer=%b need=%b await=%b start_rdy=%b frame_rdy=%b cfg_rdy=%b in_rdy=%b out_vld=%b layer=%0d",
+               d, d[0], d[1], d[2], d[3], d[4], d[5], d[6], d[7],
+               d[8], d[9], d[10], d[11], d[12], d[19:16]);
+    end
+
+    // T4: legal full-word write (LAST flag clear) must be accepted
+    expect_write(ACCEL_BASE + 32'h0C, 32'h0000_0000, 4'hF, 1'b0, 4);
+
+    // T5: partial word write must be rejected by the accelerator contract
+    expect_write(ACCEL_BASE + 32'h08, 32'h0000_0000, 4'b0001, 1'b1, 5);
+
+    // T6: unaligned address must be rejected
+    expect_read_err(ACCEL_BASE + 32'h02, 6);
+
+    // T7: after all of the above the bridge must be idle again -- this catches
+    //     a leaked err_rsp_valid (which would swallow the next real response)
+    expect_read(ACCEL_BASE + 32'h48, 32'h4B57_5431, 7);
+
+    repeat (4) @(posedge clk);
+
+    if (errors == 0) $display("TEST PASS  tb_icb_bridge");
+    else             $display("TEST FAIL  tb_icb_bridge  errors=%0d", errors);
+
+    $finish;
+  end
+
+  // global watchdog: the BRIDGE must never hang
+  initial begin
+    #200000;
+    $display("TEST FAIL  tb_icb_bridge  TIMEOUT (no $finish within 200 us)");
+    $finish;
+  end
+
+endmodule

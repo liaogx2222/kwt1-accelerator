@@ -1,0 +1,25 @@
+{
+  "evidence": "user screenshot codex-clipboard-00b2e48c-ed77-4cb7-88c6-996e1c8647d0.png",
+  "server_project": "kwt_soc_input16_metrics_595724b_tt_20261112",
+  "CPU_PID": 60028,
+  "launch_UTC": "2026-11-12T13:57:11Z",
+  "launch_Asia_Shanghai": "2026-11-12 21:57:11 +08:00",
+  "main_cache_hook_installed": true,
+  "mapped_CPU_reused_by_main_confirmed": false,
+  "CPU_top": "e203_subsys_top",
+  "frontend_completed": true,
+  "link_observed": true,
+  "declared_conditions": {
+    "corner": "TT",
+    "voltage_V": 1.1,
+    "temperature_C": 25,
+    "frequency_MHz": 150,
+    "boundary_optimization": false,
+    "hold_fix": false
+  },
+  "observed_stage": "compile library analysis and optimization startup",
+  "final_CPU_DDC_confirmed": false,
+  "CPU_area_mm2": null,
+  "whole_SoC_power_mW": null,
+  "observation_limit": "single screenshot; no final CPU mapping, gate, power or timing signoff receipt"
+}

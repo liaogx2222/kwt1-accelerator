@@ -1,0 +1,22 @@
+{
+  "profile": "INTEGER_NUMERICS_V1",
+  "parameters_sha256": "4699ba38d9df1a635ff25eb379cc27521cf8b04205f2eba3f9c8d94a5d120a7a",
+  "coefficient_words": 1816,
+  "weight_words_per_logical_bank": 6144,
+  "packets": {
+    "common.bin": "f178550ea0e8a615451092f6c26beedb82205bb5bde0f0ed8a4e5b6ebfb5e895",
+    "layer_00.bin": "84931c2aea855dc1d5dba80d45f979899d7cb63198e1bca4388e39408793a79f",
+    "layer_01.bin": "cd36befd0851697cfc258310b5238242d47404b615da1e85b95014e07faa57e4",
+    "layer_02.bin": "b9deccea5e2706c85224b8aea2b0e604daef4d396f1c8bd15332db227805cc6d",
+    "layer_03.bin": "536e96b4c151182627b051191e86f75d035d14b383c0aa86bacfcb74f6c8371f",
+    "layer_04.bin": "73b3108ce8627166cd9c82400d841af1c2decb959d4fd8a0919cd4f5106dd3c8",
+    "layer_05.bin": "194714efb9494c76410db09830d946d743870be9a4c4af3164b0a23658cf422c",
+    "layer_06.bin": "3222c291d963e220c25e61da56cc1e7b9bf4b78608ae14fd951b55ff0c225c45",
+    "layer_07.bin": "ab170a75cc11d9f83b89eef08d70aab5addcd9a4cef73381e5699215e22c4b55",
+    "layer_08.bin": "ebf412ef8e48b50f6cd0f7268165d35873c388d17ceb522b552d3740cfb437b3",
+    "layer_09.bin": "62bc73faef655e7c531623eed6ad4e400b91bfbd1716b65f42816f3d08a53126",
+    "layer_10.bin": "8b4aabbfda0e19cd60255d3734090e43f4d77e70a6057123cf027dec51d9a58d",
+    "layer_11.bin": "5f0e196aa1699328252f801d1e2e7482a43a007c51a4cdb6546ec9e5c26472d8"
+  },
+  "ROM_contains": "headers/CRC/layout only; no tensor data or expected outputs"
+}

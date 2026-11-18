@@ -1,0 +1,13 @@
+{
+  "pages": 23,
+  "pdf_bytes": 1058724,
+  "cover": "30022 uv",
+  "original_report_preserved": true,
+  "known_timing_violations_disclosed": true,
+  "power_missing_disclosed": true,
+  "target_frequency_performance_explicit": true,
+  "visual_contact_pages_reviewed": 23,
+  "clipping_or_overlap_seen": false,
+  "pdf_sha256": "fac247c690d619ba722c526b9953882d42f88ae94d0ab6cb6c763267298b020f",
+  "docx_sha256": "3d4d17bd12e9c7e2dfbb1e99cc5f57ec3809aa3dfad376dd1c3f476cadb83eb7"
+}

@@ -1,0 +1,147 @@
+{
+  "target": "smic40_server_filled_20261107",
+  "top": "kwt1_mmio",
+  "_note": "Filled on 2026-11-07 from server evidence. Library paths are absolute because the PDK lives outside the repo. wrapper_rtl / constraints_sdc are relative to this file's directory (flow/targets/). Clock uncertainty and all 14 I/O delays are PRE-LAYOUT ASSUMPTIONS A-01/A-02 in smic40.server.sdc -- they unblock S8/S9 but are not signoff evidence.",
+  "clock": {
+    "port": "clk",
+    "period_ns": 6.666667,
+    "uncertainty_ns": 0.3,
+    "source": "PRE-LAYOUT ASSUMPTION A-01 in flow/targets/smic40.server.sdc: 0.300 ns = 4.50% of period for jitter + skew before CTS; replace with post-CTS value before any 150 MHz signoff claim"
+  },
+  "sram": {
+    "instances": 20,
+    "depth": 4096,
+    "width": 16,
+    "boundary_module": "kwt_tech_sram_4096x16",
+    "wrapper_rtl": "../../rtl/integration/smic40/kwt_tech_sram_4096x16.sv",
+    "behavior_models": [
+      "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/verilog/RAMSP4096X16.v"
+    ],
+    "physical_cell": "RAMSP4096X16",
+    "area_per_instance_um2": 27451.96368,
+    "pin_map": {
+      "clk": {
+        "physical_pin": "CLK",
+        "polarity": "positive"
+      },
+      "en": {
+        "physical_pin": "CEN",
+        "polarity": "negative",
+        "legacy_unverified_transcription": ".lib setup arc when=\"RETIN !CEN !WEN[15] !GWEN\"",
+        "evidence": "Prior when-clause transcription used RETIN (letter I); actual port is RET1N (digit 1). Keep the stated active-low CEN/WEN/GWEN mapping and revalidate with current vendor macro; do not treat the legacy quote as exact Liberty text."
+      },
+      "we": {
+        "physical_pin": "WEN",
+        "polarity": "negative",
+        "width": 16,
+        "note": "active-low PER-BIT write mask; the frozen contract has one write-enable bit, so the wrapper drives all 16 bits together and also drives GWEN (active low)",
+        "legacy_unverified_transcription": ".lib setup arc when=\"RETIN !CEN !WEN[15] !GWEN\"",
+        "evidence": "Prior when-clause transcription used RETIN (letter I); actual port is RET1N (digit 1). Keep the stated active-low CEN/WEN/GWEN mapping and revalidate with current vendor macro; do not treat the legacy quote as exact Liberty text."
+      },
+      "addr": {
+        "physical_pin": "A",
+        "polarity": "positive",
+        "width": 12
+      },
+      "wdata": {
+        "physical_pin": "D",
+        "polarity": "positive",
+        "width": 16
+      },
+      "rdata": {
+        "physical_pin": "Q",
+        "polarity": "positive",
+        "width": 16
+      }
+    },
+    "tie_offs": {
+      "EMA": "3'b010",
+      "EMAW": "2'b00",
+      "note": "RET1N uses digit 1, confirmed by mapped VCS binding and user on 2026-11-11. Normal mode is explicitly tied HIGH; the current vendor-model contract must pass before accepting the implementation. EMA=2 and EMAW=0 remain unchanged.",
+      "RET1N": "1'b1"
+    },
+    "read_latency_cycles": 1,
+    "read_output_holds": true,
+    "write_preserves_read_output": true,
+    "area_source": "LEF SIZE 135.258 x 202.96 um (physical footprint). The .lib cell area attribute says 27517.3168 um^2, 0.238% larger; keep the LEF value for the area ledger and record the difference.",
+    "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_ss_0p99v_0p99v_125c.lib"
+  },
+  "corners": [
+    {
+      "name": "ss_0p99v_125c",
+      "process": "ss",
+      "voltage_v": 0.99,
+      "temperature_c": 125,
+      "time_unit": "1ns",
+      "capacitance_unit": "1pf",
+      "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_ss_0p99v_0p99v_125c.lib",
+      "standard_cell_liberty": [
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_ss_v0p99_125c_basic.db",
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_ss_v0p99_125c_basic.db",
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db"
+      ],
+      "sram_liberty": [
+        "/home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40/RAMSP4096X16_ss_0p99v_0p99v_125c.db"
+      ]
+    },
+    {
+      "name": "ff_1p21v_m40c",
+      "process": "ff",
+      "voltage_v": 1.21,
+      "temperature_c": -40,
+      "time_unit": "1ns",
+      "capacitance_unit": "1pf",
+      "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_ff_1p21v_1p21v_m40c.lib",
+      "standard_cell_liberty": [
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_ff_v1p21_-40c_basic.db",
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_ff_v1p21_-40c_basic.db",
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ff_v1p21_-40c_basic.db"
+      ],
+      "sram_liberty": [
+        "/home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40/RAMSP4096X16_ff_1p21v_1p21v_m40c.db"
+      ]
+    },
+    {
+      "name": "tt_1p10v_25c",
+      "process": "tt",
+      "voltage_v": 1.1,
+      "temperature_c": 25,
+      "time_unit": "1ns",
+      "capacitance_unit": "1pf",
+      "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_tt_1p10v_1p10v_25c.lib",
+      "standard_cell_liberty": [
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_tt_v1p1_25c_basic.db",
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_tt_v1p1_25c_basic.db",
+        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_tt_v1p1_25c_basic.db"
+      ],
+      "sram_liberty": [
+        "/home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40/RAMSP4096X16_tt_1p10v_1p10v_25c.db"
+      ]
+    }
+  ],
+  "io": {
+    "input_delay_ns": {
+      "abort_hw": 1.5,
+      "core_enable": 1.5,
+      "mem_enable": 1.5,
+      "req_valid": 1.5,
+      "req_write": 1.5,
+      "req_addr": 1.5,
+      "req_wdata": 1.5,
+      "req_wstrb": 1.5,
+      "resp_ready": 1.5
+    },
+    "output_delay_ns": {
+      "req_ready": 1.5,
+      "resp_valid": 1.5,
+      "resp_rdata": 1.5,
+      "resp_error": 1.5,
+      "irq": 1.5
+    },
+    "reset_constraints": "rst_n: asynchronous assertion, synchronous de-assertion, timed as a normal input with 1.500 ns input delay (A-04). No whole-domain false path is used, so DC must build and time a real SMIC40 reset tree.",
+    "source": "PRE-LAYOUT ASSUMPTION A-02 in flow/targets/smic40.server.sdc: on-chip synchronous MMIO bus, 22.5% of period per direction (1.500 ns in + 1.500 ns out); leaves 3.366667 ns of internal logic after 0.300 ns clock uncertainty"
+  },
+  "exceptions": [],
+  "constraints_sdc": "smic40.server.sdc",
+  "_correction_20261111": "RETIN/nine-port interpretation superseded by actual RET1N port. See RET1N_RESET_CANDIDATE_20261111.md. This registry is not an input file in the exported standalone candidate source manifest."
+}

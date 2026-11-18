@@ -1,0 +1,53 @@
+{
+  "source_revision": "7b22f70bb6d6b0effbbc0df8cf8e280c25091ae0",
+  "development_dirty": false,
+  "directory": "kwt_parallel_max_20261112_7b22f70",
+  "bytes": 67840,
+  "sha256": "bd5e2330e9c3a42c2de8795eae7cdcbe93e70d9b952d569dd4cc8882b0f66dc3",
+  "parts": 112,
+  "commands": 116,
+  "assets": 25,
+  "projects": 4,
+  "hold_optimization": false,
+  "full_SoC_PPA": false,
+  "stdin_clipboard_parts": 4,
+  "release_validation": {
+    "passed": true,
+    "transport_and_stdin_reconstructed": true,
+    "Python36_runtime_syntax": true,
+    "four_project_source_checks": true,
+    "base_and_live_marker_preserved": true,
+    "no_old_build_copied": true,
+    "existing_batch_refused": true,
+    "bad_asset_rejected": true,
+    "source_drift_rejected": true,
+    "hold_fix_disabled_hold_constraints_retained": true,
+    "production_BLOCK_STREAM1": true,
+    "per_project_WORK_and_alib_isolated": true,
+    "mock_peak_concurrent_jobs": 4,
+    "mock_failed_job_did_not_stop_other_three": true,
+    "dry_run_did_not_launch": true,
+    "actual_server_or_EDA_started": false,
+    "scope": "transport/source/Tcl separately mocked and scheduler control only"
+  },
+  "dc_Tcl_matches_four_parameterized_fault_tests": true,
+  "server_started": false,
+  "clipboard_files": {
+    "STDIN_PART_01.txt": {
+      "bytes": 27536,
+      "sha256": "8bb48528fc9bc1bf9e08cf027e245ea6acf0e9e03e525fc76ccae9730883629f"
+    },
+    "STDIN_PART_02.txt": {
+      "bytes": 27268,
+      "sha256": "088521d4af54a10e4fd2f631b5b34d1697fe74e71425c379a5add64bfb01436e"
+    },
+    "STDIN_PART_03.txt": {
+      "bytes": 27268,
+      "sha256": "f3ab8b1b357cc0026ab737d2d35007b5f24dcf5bf218810dd1198f3519e8c159"
+    },
+    "STDIN_PART_04.txt": {
+      "bytes": 8807,
+      "sha256": "246a487effc630dc0519241b04304bbba0b5affd3c618955d3a4f7ac51b41b21"
+    }
+  }
+}

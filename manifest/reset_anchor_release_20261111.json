@@ -1,0 +1,26 @@
+{
+  "source_revision": "2b2dc171a1601d955609bc65db1ca4b00ff0c7a1",
+  "source_parent": "e4a8981f022a0e0b503a4d3aff80fca13c94f178",
+  "changed_project_files": [
+    "flow/dc.tcl",
+    "flow/reset_rules.tcl"
+  ],
+  "project_file_count": 63,
+  "development_dirty": false,
+  "full_archive": {
+    "path": "deliverables/reset_anchor_20261111/full.tar.gz",
+    "bytes": 1028078,
+    "sha256": "2b77e43262543105a04e2c6488d3ede0000889e91e67c98351835815df5d210c"
+  },
+  "proofs": {
+    "testdata/reset_anchor_objects_20261111/summary.json": "c8599eb5a39fe0a43c1cc781f86ff6da9e60de27184ac7490b70ad669330acb3",
+    "testdata/reset_anchor_flow_20261111/v2/summary.json": "d5fa6dc68037f5eea5618c3664be8cf1905514e63c66f9e4f361cb60e423a7db",
+    "testdata/reset_anchor_package_20261111/summary.json": "11589364b5ccb66ab58eb829296341fc4c0f1e9d0e8c9a0e43e51cdbe1f4fc72",
+    "testdata/reset_anchor_install_20261111/summary.json": "51b0ba5cbaa002cf86602701063ba67fc4cd4ee7cf934808d2526267e0a64c40"
+  },
+  "all_local_checks_passed": true,
+  "server_execution": false,
+  "numerical_RTL_unchanged": true,
+  "SDC_unchanged": true,
+  "SRAM_wrapper_model_unchanged": true
+}

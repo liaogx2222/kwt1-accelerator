@@ -1,0 +1,19 @@
+{
+  "target": "smic40_pending",
+  "technology": "SMIC 40nm",
+  "technology_source": "User confirmation, 2026-11-03",
+  "status": "pending_library_and_platform_binding",
+  "top": "kwt1_mmio",
+  "clock_period_ns": 6.666667,
+  "sram_instances": 20,
+  "sram_depth_words": 4096,
+  "sram_width_bits": 16,
+  "standard_cell_liberty": [],
+  "sram_liberty": [],
+  "sram_simulation_models": [],
+  "sram_wrapper_rtl": null,
+  "pvt_corners": [],
+  "io_constraints_sdc": null,
+  "sram_area_per_instance_um2": null,
+  "note": "Target identity only. No cell names, voltage, PVT, macro area or timing inferred from the process node. Local generic verification does not require this target to be bound."
+}

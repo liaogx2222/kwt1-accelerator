@@ -1,0 +1,8 @@
+help link_design
+help report_checks
+help report_worst_slack
+help report_tns
+help check_setup
+help find_timing_paths
+help report_clock_min_period
+exit

@@ -1,0 +1,9 @@
+{
+  "iverilog": "/opt/iverilog/bin/iverilog",
+  "vvp": "/opt/iverilog/bin/vvp",
+  "riscv-gcc": "/opt/riscv/bin/riscv32-unknown-elf-gcc",
+  "cxx": "c++ -pthread",
+  "verilator": "/opt/verilator/bin/verilator",
+  "verilator_root": "/opt/verilator/share/verilator",
+  "yosys": "/opt/yosys/bin/yosys"
+}

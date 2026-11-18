@@ -1,0 +1,36 @@
+# =============================================================================
+# 本项目全部文件在 Windows 上以 CRLF 编写。
+#
+# 关键约束：flow/smic40/ 下的 *.sv / *.tcl 的 sha256 是与 RServer06 之间
+# 唯一的上传校验凭证。系统级 gitconfig 里 core.autocrlf=true，若不显式覆盖，
+# 一次 checkout 就会把文件变成 LF，凭证当场失效。
+#
+# 因此统一 eol=crlf：索引存规范 LF（diff 可读），checkout 出 CRLF（字节还原）。
+# 已实测：PROJECT_STATUS 等文件 checkout 前后 sha256 一致。
+# =============================================================================
+* text=auto eol=crlf
+
+# ---- 与服务器有 sha256 契约的文件：显式钉死 --------------------------
+*.sv   text eol=crlf
+*.svh  text eol=crlf
+*.v    text eol=crlf
+*.vh   text eol=crlf
+*.tcl  text eol=crlf
+*.sdc  text eol=crlf
+*.sh   text eol=crlf
+*.csh  text eol=crlf
+*.hex  text eol=crlf
+
+# ---- 真二进制 -------------------------------------------------------
+*.zip   binary
+*.pdf   binary
+*.gz    binary
+*.ddc   binary
+*.db    binary
+*.lib   binary
+*.a     binary
+*.o     binary
+*.obj   binary
+*.vcd   binary
+*.fsdb  binary
+*.saif  binary

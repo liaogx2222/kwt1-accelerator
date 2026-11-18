@@ -1,0 +1,16 @@
+read_liberty -lib third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+read_verilog -sv rtl/micro/rne_pipe.sv rtl/block_transfer/kwt_rne_dense_right.sv
+design -save sources
+synth -top rne_pipe -noabc
+dfflibmap -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+clean
+check -assert
+stat -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+design -load sources
+synth -top kwt_rne_dense_right -noabc
+dfflibmap -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+clean
+check -assert
+stat -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib

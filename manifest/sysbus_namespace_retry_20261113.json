@@ -1,0 +1,39 @@
+{
+  "scope": "r1 specific native-link failure, namespace-only retry; no arithmetic optimization",
+  "failed_server_project": "kwt_sysbus_v1_20261113_r1",
+  "new_server_project": "kwt_sysbus_v1_20261113_r2",
+  "native_errors": [
+    "LINK-1 load_cmd_valid missing on cached e203_subsys_top",
+    "LINK-25 stale cached wrapper",
+    "UID-95 new core instance missing"
+  ],
+  "failed_r1_elapsed_seconds": 59,
+  "actual_r2_server_started": false,
+  "actual_r2_DC_passed": false,
+  "user_controls_RTL_chat": true,
+  "no_further_RTL_chat_messages": true,
+  "qualification": {
+    "passed": true,
+    "Python36_syntax": true,
+    "simulated_failed_r1_clone": true,
+    "old_evidence_preserved": true,
+    "no_build_copied": true,
+    "existing_r2_refused": true,
+    "HDL_changes_exactly_module_reference_renames": true,
+    "ports_instance_names_logic_unchanged": true,
+    "arithmetic_and_fixtures_byte_identical": true,
+    "actual_DC_r2": false,
+    "new_gate_not_run": true,
+    "reuses_prior_RTL_76032_cold_and_6336_recovery_evidence_by_exact_rename_proof": true,
+    "actual_full_RTL_frontend_pass": true,
+    "unused_original_chip_top_excluded": true,
+    "retry_source_sha256": "00a4b12db1d5e7a2a562b8bd5f7cc576551fa2a32c873318d0ff5c5a0a22a4bf",
+    "clipboard_bytes": 3657
+  },
+  "files": {
+    "PASTE_RETRY.py": "d00d73130381370eace757532dbc9defdb5564acd1d5eeafedda51c070d9e4c0",
+    "retry_sysbus_namespace.py": "57fc6dd957b14c50761a7bf520743b485d314241cd3dafc5dda0fcc7356c75f2",
+    "qualification.json": "a449fea5d52a7333f2669b971c694da561bf57cb83d80c341c6d7e86d322a3e2",
+    "frontend_fixed.log": "328ab3209657e212357b956a9232338aa6db055b3ce2e07dc9d67b42d53d1927"
+  }
+}

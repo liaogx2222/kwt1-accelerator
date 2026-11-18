@@ -1,0 +1,43 @@
+{
+  "transfer": {
+    "RTL_revision": "595724b88858b142a407f6a5c4761945252d523b",
+    "accuracy_drop_pp": 0.06749156355455568,
+    "accuracy_scope": "existing full validation numerical-model outputs, not 4445 RTL classifications or official 600",
+    "actual_server_run": false,
+    "bytes": 52778,
+    "clipboard_parts": 3,
+    "directory": "kwt_parallel_max_20261112_input16_595724b",
+    "energy_uJ": null,
+    "no_existing_job_or_worktree_mutated": true,
+    "power_mW": null,
+    "producer_revision": "5c7900f4564a5c2c1c2481d309d2e0d96fbacb0b",
+    "projects": 1,
+    "reference_cycles": 2407590,
+    "sha256": "8d614398c66b136794e5dec9ce913ec68bd0e2081814c0eeec806e6c145fac85",
+    "whole_SoC_area_mm2": null
+  },
+  "installation_validation": {
+    "passed": true,
+    "source_checked": true,
+    "base_live_marker_preserved": true,
+    "no_old_build_or_lock_copied": true,
+    "existing_target_refused": true,
+    "Python36_loader": true,
+    "clipboard_parts_reassemble": true,
+    "actual_server_run": false,
+    "actual_DC_run": false
+  },
+  "Tcl_validation": {
+    "passed": true,
+    "DC_fault_cases": 18,
+    "PT_fault_cases": 3,
+    "actual_EDA": false
+  },
+  "RTL_evidence_commit": "b9b7650662eb782cfa22f99cbfdee75eb3191943",
+  "conditional_throughput_at_unverified_150MHz": 62.30296686728222,
+  "latency_ms_at_unverified_150MHz": 16.0506,
+  "whole_SoC_area_mm2": null,
+  "added_scored_area_mm2": null,
+  "power_mW": null,
+  "energy_uJ": null
+}

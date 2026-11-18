@@ -1,0 +1,20 @@
+# TEMPLATE ONLY - do not pass this file directly to a simulator.
+# run_verdi_gate.sh generates signoff_out/gate_sim/gate.files.f with real
+# absolute paths. Relative paths in a -f file are resolved from the CWD,
+# not from the filelist's own directory.
+#
+# Order matters: library/cell models -> macro model -> DC netlist -> testbench.
+# The macro model must define EXACTLY the module name instantiated in mapped.v.
+
++libext+.v
+# Uncomment ONE dumper (the script adds it via +define+):
+# +define+FSDB
+# +define+VCD
+# Uncomment only when SDF timing annotation is wanted:
+# +define+SDF
+# +define+CLK_HALF=3.333334
+
+<REPO>/signoff_out/gate_sim/stdcell_sim.v
+<REPO>/signoff_out/gate_sim/sram_macro_sim.v
+<REPO>/signoff_out/dc_synth/mapped.v
+<REPO>/keyword-transformer/flow/verdi/tb_gate_mmio.sv

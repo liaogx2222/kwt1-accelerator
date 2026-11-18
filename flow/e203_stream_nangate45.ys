@@ -1,0 +1,16 @@
+read_liberty -lib third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+read_verilog -sv rtl/block_transfer/kwt_e203_stream_write.sv rtl/block_transfer/kwt_stream_ingress.sv
+design -save source
+synth -top e203_subsys_nice_core -noabc
+dfflibmap -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+clean
+check -assert
+stat -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+design -load source
+synth -top kwt_stream_ingress -noabc
+dfflibmap -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+clean
+check -assert
+stat -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib

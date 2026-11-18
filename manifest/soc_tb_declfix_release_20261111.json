@@ -1,0 +1,33 @@
+{
+  "revision": "7f71e6ce8fb08e8052c443bc17e33d6f2e5f45ac",
+  "base_manifest_sha256": "d0448c279a962f1c4eb019d1ab9d23a379ecc7b9e508089d898557e13bde8807",
+  "new_manifest_sha256": "6f2953472a6baa2327594c7d8c7fea74337fe77fb1a9c72c4f7ac3979464cae5",
+  "new_tb_sha256": "a2dee84d13715e2d0c01fce9fedf4e422824549b00d21dc369f4a34efcebf2c5",
+  "bytes": 5496,
+  "sha256": "e19790f61ba9c655ef26451c9cde40efaddedd76a139785ab66c087ac81cb150",
+  "parts": 10,
+  "package_self_test": {
+    "passed": true,
+    "full_197_file_check": true,
+    "only_testbench_source_changed": true,
+    "failed_runs_preserved": true,
+    "idempotent": true,
+    "source_mismatch_rejected": true,
+    "existing_executable_preserved": true,
+    "archive_collision_rejected": true,
+    "transport_reconstruction": true,
+    "python36": true,
+    "actual_server_VCS": false
+  },
+  "local_lint": {
+    "passed": true,
+    "full_source_Verilator_timed_lint": true,
+    "monitor_logic_block_identical": true,
+    "remaining_tokens_identical": true,
+    "done_and_host_declared_before_monitor": true,
+    "CPU_and_accelerator_match_baseline": true,
+    "server_VCS_verified": false,
+    "tb_sha256_LF": "a2dee84d13715e2d0c01fce9fedf4e422824549b00d21dc369f4a34efcebf2c5"
+  },
+  "server_VCS_verified": false
+}

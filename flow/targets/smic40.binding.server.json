@@ -1,0 +1,56 @@
+{
+  "target": "smic40_server_bound_template",
+  "top": "kwt1_mmio",
+  "clock": {
+    "port": "clk",
+    "period_ns": 6.666667,
+    "uncertainty_ns": null,
+    "source": null
+  },
+  "sram": {
+    "instances": 20,
+    "depth": 4096,
+    "width": 16,
+    "boundary_module": "kwt_tech_sram_4096x16",
+    "wrapper_rtl": null,
+    "behavior_models": [],
+    "physical_cell": null,
+    "area_per_instance_um2": null,
+    "pin_map": {},
+    "read_latency_cycles": 1,
+    "read_output_holds": true,
+    "write_preserves_read_output": true,
+    "source": null
+  },
+  "corners": [],
+  "io": {
+    "input_delay_ns": {},
+    "output_delay_ns": {},
+    "reset_constraints": null,
+    "source": null
+  },
+  "exceptions": [],
+  "constraints_sdc": null,
+  "_hints": {
+    "_usage": "Copy this file, fill every null/empty field from AUTHORIZED SMIC40 platform material, then run scripts/check_technology.py --config <this file>. This file itself is a template: check_technology.py must still report missing items until all fields are populated. Never edit smic40.binding.pending.json.",
+    "_path_rule": "Relative paths are resolved against the directory containing the config file (check_technology.py:26). Absolute paths are accepted but reduce portability.",
+    "_frozen_contract": "check_technology.py:29-32 hard-codes top=kwt1_mmio, clock=clk@6.666667ns, sram instances=20, depth=4096, width=16, boundary_module=kwt_tech_sram_4096x16, read_latency_cycles=1, read_output_holds=true, write_preserves_read_output=true. A real macro that violates any of these produces errors (not missing) and can never pass. Reopen scheduling/latency and equivalence review explicitly before changing anything (flow/README.md:64-68).",
+    "clock.uncertainty_ns": "Positive number from the designated platform/library timing document or PLL/jitter spec. Record the document in clock.source.",
+    "clock.source": "Path or identifier of the authorized document that defines jitter/uncertainty.",
+    "sram.wrapper_rtl": "Path to the real macro wrapper RTL. It MUST declare: module kwt_tech_sram_4096x16 (check_technology.py:34). Do not point at rtl/integration/tech_sram_model.sv (behavioral array model).",
+    "sram.physical_cell": "Exact physical macro cell name from the foundry/macro datasheet.",
+    "sram.source": "Authorized macro datasheet / Liberty / LEF identifier covering pin polarity and timing.",
+    "sram.area_per_instance_um2": "Positive number, actual macro area in um^2 per instance from the authorized macro data. Used 20x in the complete counted area. CACTI/BSG analytical values are NOT acceptable.",
+    "sram.pin_map": "Dictionary keyed by clk, en, we, addr, wdata, rdata. Each entry needs physical_pin (string) and polarity (documented active-high/active-low or bus semantics). Example: {\"en\": {\"physical_pin\": \"CEN\", \"polarity\": \"active_high\"}}.",
+    "sram.behavior_models": "List of paths to the authorized macro simulation/Verilog models (one or more). Files must exist.",
+    "corners": "Non-empty list. Each corner needs: name, process, voltage_v, temperature_c, time_unit, capacitance_unit, source, standard_cell_liberty (list of existing .lib paths), sram_liberty (list of existing .lib paths). Cover setup and hold corners required by the platform. Do not invent PVT from the 40nm label.",
+    "io.source": "Authorized document defining I/O drive/load and delay values.",
+    "io.reset_constraints": "Reset removal/recovery and reset-domain constraints from the designated platform.",
+    "io.input_delay_ns": "One positive delay for EACH non-clk/rst_n input port of rtl/v2/kwt1_mmio.sv. Print the exact 14 names with: python3 -c \"import sys;sys.path.insert(0,'scripts');import check_technology as t;print(sorted(k for k in t.ports() if k not in ('clk','rst_n')))\"",
+    "io.output_delay_ns": "One positive delay for EACH non-clk/rst_n output port, same method as input_delay_ns.",
+    "exceptions": "Optional. Every entry needs source and reason. Whole-domain scopes all / clock_domain and SDC set_false_path on all_inputs/all_outputs/all_clocks are rejected.",
+    "constraints_sdc": "Path to a reviewed SDC file generated on the server. MUST contain: create_clock with 6.66666, set_input_delay, set_output_delay, set_clock_uncertainty. Must NOT contain a broad false path. Include macro coQ/setup/hold/load, I/O drive/load, reset conversion, clock tree and uncertainty.",
+    "_post_check": "A passing preflight yields physical_signoff=false by design. It only proves configuration/source/constraint screening is complete; STA, area and power signoff are separate later stages."
+  },
+  "note": "Server-side fill-in template derived from smic40.binding.pending.json. No library, PVT, macro area, pin polarity or timing value is inferred from the process node. Do not commit filled paths/values as if they were reviewed constraints."
+}

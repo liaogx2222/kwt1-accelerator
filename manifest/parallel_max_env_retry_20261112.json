@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "user_confirmed_cause": "new terminal missing environment variables",
+  "batch_source_revision": "7b22f70",
+  "retry_source_only": true,
+  "old_failed_logs_preserved": true,
+  "no_build_or_locks_or_status_copied": true,
+  "cloned_four_projects_source_verified": true,
+  "existing_retry_refused": true,
+  "server_retry_executed": false,
+  "command_file": "deliverables/parallel_max_20261112_v2/RETRY_ENV.csh.txt",
+  "clone_command": "import json,shutil;from pathlib import Path;p=Path.cwd();s=json.loads((p/\"states.json\").read_text());assert len(s[\"projects\"])==4 and all(v[\"stage\"]==\"failed_precheck\" for v in s[\"projects\"].values()),\"NOT_ALL_PRECHECK_FAILED\";q=p.with_name(p.name+\"_r1\");shutil.copytree(str(p),str(q),ignore=shutil.ignore_patterns(\"build\",\"*.log\",\"states*.json\",\"launch.lock\",\"__pycache__\"));print(\"RETRY_SOURCE_CREATED \"+str(q))",
+  "server_observed_stages": {
+    "baseline8": "failed_precheck",
+    "overlap": "failed_precheck",
+    "refine": "failed_precheck",
+    "writeback": "failed_precheck"
+  },
+  "server_DC_started": false,
+  "server_preflight_error_text_received": false,
+  "user_confirmed_environment_missing": true,
+  "screenshot_sha256": "d7716108e570669a9ad9b000016902112eeb034f53a8ce0c2db748db1e55410a"
+}

@@ -1,0 +1,29 @@
+{
+  "evidence": "user screenshots 136d86df, 78b51a0a, e0002379, 3a108ac5, 47ce07b2 on 2026-11-13",
+  "report_scope": "PT preflight, default activity; not full-task power",
+  "report_time_server_local": "2026-11-13 01:39:13",
+  "operating_condition": "TT 1.1V 25C",
+  "displayed_total_power_W": 0.0456,
+  "displayed_clock_group_percent": 92.61,
+  "clock_group_attribute_i": "including register clock pin internal power",
+  "displayed_memory_group_percent": 6.33,
+  "net_switching_power_W": 0.001437,
+  "cell_internal_power_W": 0.0437,
+  "cell_leakage_power_W": 0.000487,
+  "task_power_mW": null,
+  "task_energy_uJ": null,
+  "pre_update_activity_report": {
+    "from_activity_file_nets": 0,
+    "not_annotated_nets": 573220,
+    "total_nets": 587286,
+    "not_annotated_percent": 97.60,
+    "final_after_update_coverage_not_yet_reviewed": true
+  },
+  "power_check_issue": "clock pin ramp 0.00 ns outside library table range, example 0.01 to 1.44 ns",
+  "wire_load_model": "not set; no routed parasitics demonstrated",
+  "existing_collector_issue": "expects Total Dynamic Power but native PT prints Net Switching Power plus Cell Internal Power",
+  "remediation": "independent sidecar parser and separate PT review output; 0.150 ns declared reference clock slew; coverage after update_power",
+  "running_gate_and_manifest_modified": false,
+  "sidecar_actual_server_execution_confirmed": false,
+  "signoff": false
+}

@@ -1,0 +1,41 @@
+{
+  "source": "user screenshots 2026-11-12",
+  "server_project": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_parallel_max_20261112_7b22f70_r1/baseline8",
+  "flow_revision": "7b22f70bb6d6b0effbbc0df8cf8e280c25091ae0",
+  "RTL_revision": "2b2dc171a1601d955609bc65db1ca4b00ff0c7a1",
+  "source_files": 64,
+  "check_dc_passed": true,
+  "macros": 20,
+  "clean_synth_done": true,
+  "netlist_sha256": null,
+  "netlist_sha256_note": "visible in screenshot, not transcribed; request text for authoritative ledger",
+  "area_mm2": {
+    "accelerator_total_including_macros": 0.970493328218,
+    "private_macros": 0.550346328125,
+    "standard_cells": 0.420147000093,
+    "whole_SoC": null
+  },
+  "PT_display_precision_only": true,
+  "setup": {
+    "ss_async_slack_ns": -2.26,
+    "ss_async_TNS_ns": -156.16,
+    "ss_clk_slack_ns": 0.0,
+    "ss_clk_TNS_ns": 0.0,
+    "ss_clk_violations": 0,
+    "ff_async_slack_ns": 2.74,
+    "ff_clk_slack_ns": 2.78,
+    "tt_async_slack_ns": 1.12,
+    "tt_clk_slack_ns": 2.11
+  },
+  "recovery_pass": false,
+  "hold_remediation": "deferred by user",
+  "actual_worst_path_body_received": false,
+  "power_mW": null,
+  "energy_uJ": null,
+  "throughput_reference": {
+    "cycles": 12017466,
+    "conditional_at_unverified_150MHz": 12.481832692516043,
+    "scope": "prior full SoC functional case, not newly measured in DC"
+  },
+  "input16_metrics_not_mixed": true
+}

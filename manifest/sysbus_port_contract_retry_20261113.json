@@ -1,0 +1,27 @@
+{
+  "evidence_screenshot": "21d9a6e4-713f-4002-923d-9ed6afa25f3a",
+  "expected_failed_project": "kwt_sysbus_v1_20261113_r2",
+  "new_project": "kwt_sysbus_v1_20261113_r3",
+  "scope": "DC port-collection guard only",
+  "qualification": {
+    "passed": true,
+    "Python36": true,
+    "mocked_failed_r2_clone": true,
+    "existing_r3_refused": true,
+    "only_changed_source": "flow/dc.tcl",
+    "all_HDL_arithmetic_parameters_firmware_unchanged": true,
+    "no_old_build_copied": true,
+    "old_failure_preserved": true,
+    "native_Tcl_contract_cases": 7,
+    "split_bus_32_pass": true,
+    "aggregate_bus_pass": true,
+    "missing_wrong_width_wrong_names_rejected": true,
+    "actual_DC_r3": false
+  },
+  "actual_r3_server_started": false,
+  "files": {
+    "PASTE_RETRY.py": "670d88bbc4e35834b3a87e4e7afc6f9fd7fe79af8161fa22a2d3340aa8890902",
+    "qualification.json": "2de178d67c39a67275b712d70e75549a091b15412cdbcca9ab094fccb4d07f9c",
+    "retry_sysbus_port_contract.py": "80454bc539c77057566f924295e7220de7b870b744056e564136099563614e8f"
+  }
+}

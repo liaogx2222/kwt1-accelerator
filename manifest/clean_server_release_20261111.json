@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "source_revision": "4dc49f795480e6c8430dc307f3700c6d82b73137",
+  "development_dirty": false,
+  "bundle_relative_path": "deliverables/rtl_v2_paired_ln_clean_20261111",
+  "archives": {
+    "full.tar.gz": {
+      "bytes": 1025777,
+      "sha256": "ae6b9cb98feee9769222f2d06fb83ec809ffa93e1be8623fc2a40556d8d3c0fc"
+    },
+    "source.tar.gz": {
+      "bytes": 36117,
+      "sha256": "10c7bcde38f4044c7721fce8df9081e2b370e608fd913f4067ba4c260ca71c05"
+    }
+  },
+  "source_chunks": 61,
+  "selftest": {
+    "passed": true,
+    "source_chunks": 61,
+    "archives_verified": 2,
+    "source_fixture_import": true,
+    "python36_syntax": true,
+    "modified_source_rejected": true,
+    "stale_netlist_rejected": true,
+    "synthetic_guard_checks_only": true,
+    "EDA_execution": false
+  },
+  "server_execution": false,
+  "server_blocker": "Computer Use failed to write kernel assets, os error 3; VNC not observed",
+  "measurement_scope": "candidate cycle and zero-difference evidence are local; new mapped/full-SoC PPA unavailable"
+}

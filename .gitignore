@@ -1,0 +1,24 @@
+# ---- 本地工具链（不随仓库分发，见 README「复现」一节） ----
+/tools/
+
+# ---- 数据集与模型权重（体量大，按上游 README 自行准备） ----
+/data1/
+/data2/
+/testdata/
+/models_data_v2_12_labels/
+*.wav
+
+# ---- 第三方参考树（cacti 含预编译二进制，bsg_fakeram 自带 .git） ----
+/third_party/
+
+# ---- 构建与波形产物 ----
+*.pyc
+**/__pycache__/
+*.vcd
+*.fsdb
+*.saif
+*.ddc
+*.zip
+/tmp/pdfs/
+/.history_sta
+/history_sta/

@@ -1,0 +1,12 @@
+cpu/e203/core
+cpu/e203/debug
+cpu/e203/fab
+cpu/e203/general
+cpu/e203/perips
+cpu/e203/perips/apb_adv_timer
+cpu/e203/perips/apb_gpio
+cpu/e203/perips/apb_i2c
+cpu/e203/perips/apb_spi_master
+cpu/e203/perips/apb_uart
+cpu/e203/soc
+cpu/e203/subsys

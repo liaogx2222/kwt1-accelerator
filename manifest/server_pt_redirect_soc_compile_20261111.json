@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-11",
+  "deadline": "2026-11-13 24:00 Asia/Shanghai",
+  "provenance": "user screenshots; complete actual reports not available locally",
+  "PT": {
+    "observed_errors": [
+      "PT-063 LC executable path unset at startup",
+      "SEL-005 empty design collection before initial read"
+    ],
+    "fatal": "Errors detected during redirect",
+    "fatal_report_inferred": "build/pt/area_ss.rpt",
+    "fatal_report_text_confirmed": false,
+    "report_bytes_SS": {
+      "area": 47,
+      "check_timing": 1449254,
+      "constraints": 4627874,
+      "coverage": 1143,
+      "timing": 947470
+    },
+    "accepted": false
+  },
+  "DC": {
+    "check_design_stage": "before compile_ultra, established by frozen dc.tcl",
+    "pre_mapping_summary": {
+      "LINT_0_unconnected_inputs": 1,
+      "LINT_1_cells_do_not_drive": 327,
+      "LINT_33_same_cell_multiple_pins": 33,
+      "total": 361
+    },
+    "observed_negative_slacks_ns": [
+      -0.12,
+      -0.09,
+      -0.07,
+      -0.07,
+      -0.07,
+      -0.07,
+      -0.03,
+      -0.01
+    ],
+    "negative_path_types_and_endpoints": null,
+    "mapped_full_design_check_pending": true,
+    "area_mm2_including_private_SRAM": 0.969021816158
+  },
+  "SoC_VCS": {
+    "declaration_error_resolved": true,
+    "compile_elaborate_link_observed": true,
+    "make_future_timestamp_warnings_seconds_max": 0.86,
+    "numerical_result_observed": false,
+    "accepted": false
+  },
+  "soc_conditional_throughput_task_s_at_150MHz": 12.481838924365048,
+  "soc_power_mW": null,
+  "soc_energy_uJ": null,
+  "full_soc_area_mm2": null,
+  "screenshot_sha256": {
+    "PT_errors_and_files": "964be38fb73918db3eca722b59eaf5a5e04b0493113a1cad6799955a0fa859ed",
+    "DC_design_and_constraints": "20750f475476db9c82361073bca5523c1686630e9a5818bf4420f32e69379161",
+    "SoC_VCS_build": "21eb94b58d9a3fe763921cd919d8b1a6a751ca610211856fe11c9a12f7be9bbb"
+  }
+}

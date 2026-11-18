@@ -1,0 +1,13 @@
+{
+  "evidence": "user screenshot codex-clipboard-77609068-b40a-44b0-a9ac-faf44749bab7.png",
+  "project": "kwt_soc_input16_metrics_595724b_tt_20261112",
+  "stage": "SoC top-level link",
+  "diagnostic": "Cannot find the design kwt1_mmio in library WORK (LBR-1); Unable to resolve reference kwt1_mmio in kwt_soc_joint (LINK-5); SOC_FATAL SoC link failed",
+  "standalone_accelerator_mapping_retained": true,
+  "CPU_parallel_mapping_failure_not_observed": true,
+  "SoC_compile_ultra_started": false,
+  "SoC_failed_session_elapsed_seconds": 69,
+  "exact_reason_preloaded_DDC_reference_unavailable_after_elaboration": "not yet experimentally determined",
+  "next_probe": "private link-only run: load mapped DDC after elaboration, rename reference uniquely, explicitly change_link, require final link and 100 macros; no compile_ultra or original source changes",
+  "whole_SoC_power_mW": null
+}

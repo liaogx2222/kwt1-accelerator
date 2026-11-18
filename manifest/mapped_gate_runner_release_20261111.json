@@ -1,0 +1,22 @@
+{
+  "source_manifest_sha256": "f731ed1f26e7cf4b74df948e283261183ff7bff8f2928a67f132e8748171c55e",
+  "runner_sha256": "f496b485509cd3becc96e0cd779d5eff471a54d20060754bc9f7eccdb90a1557",
+  "bytes": 1894,
+  "sha256": "3ec119cde4050a1204c314badcd49ea4316509771733e1e620eb15dbf02d240b",
+  "parts": 4,
+  "mock_cache_and_provenance_check": {
+    "passed": true,
+    "source_59_files_unchanged": true,
+    "netlist_unchanged": true,
+    "transport_reconstruction": true,
+    "repeated_install": true,
+    "mock_two_cases_one_compile": true,
+    "prior_case_preserved": true,
+    "changed_cell_model_cache_rejected": true,
+    "modified_executable_rejected": true,
+    "legacy_check_saif_pairing": true,
+    "python36_installer": true,
+    "actual_VCS_or_mapped_function": false
+  },
+  "actual_gate_function_pass": false
+}

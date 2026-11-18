@@ -1,0 +1,19 @@
+{
+  "retry": "r02",
+  "parts": 25,
+  "bytes": 19968,
+  "sha256": "553d9052a74ada8730bf56ab17f0a0f72c3e31b9cc3a9c2f228a17df048cb93b",
+  "remote_filename": "apply_flowfix_r02.py",
+  "command_file": "commands_r02.csh.txt",
+  "command_file_sha256": "5d9e52bcc1d1319d8dbba38bbd5c4f9796f5a2adc65abec2d701ec2c59ff5f5a",
+  "reconstructed": true,
+  "truncation_rejected": true,
+  "installer_unchanged": true,
+  "test": {
+    "passed": true,
+    "repeated_transfer": true,
+    "corrupt_transfer_rejected": true,
+    "verified_destination_preserved": true,
+    "installer_sha256": "553d9052a74ada8730bf56ab17f0a0f72c3e31b9cc3a9c2f228a17df048cb93b"
+  }
+}

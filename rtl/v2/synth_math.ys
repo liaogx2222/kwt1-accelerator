@@ -1,0 +1,5 @@
+read_verilog -sv rtl/micro/mul_pipe.sv rtl/micro/rne_pipe.sv rtl/v2/kwt_math.sv
+synth -top kwt_math -flatten -noabc
+check -assert
+stat
+write_verilog -noattr testdata/rtl_v2/synth/math_generic.v

@@ -1,0 +1,16 @@
+# Technology independent synthesis. Fixed external SRAM boundaries, no library
+# area/frequency/energy claim. Run from keyword-transformer project directory.
+read_verilog -sv -DKWT_TECH_SRAM -Irtl/v2/generated rtl/v2/kwt_tech_sram_blackbox.sv rtl/micro/mul_pipe.sv rtl/micro/rne_pipe.sv rtl/v2/kwt_sram_sp.sv rtl/v2/kwt_mac8x8.sv rtl/v2/kwt_iterative.sv rtl/v2/kwt_math.sv rtl/v2/kwt_packet_loader.sv rtl/v2/kwt_layer_banked.sv rtl/v2/kwt1_accel.sv rtl/v2/kwt1_mmio.sv
+hierarchy -check -top kwt1_mmio
+proc
+opt
+wreduce
+opt_clean
+flatten
+check -assert
+write_json testdata/rtl_v2/synth/premap.json
+synth -top kwt1_mmio -noabc -noshare
+check -assert
+stat
+write_json testdata/rtl_v2/synth/generic.json
+write_verilog -noattr testdata/rtl_v2/synth/generic.v

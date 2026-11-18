@@ -1,0 +1,53 @@
+{
+  "integration": "SYSBUS_V1",
+  "arithmetic_RTL_revision": "595724b88858b142a407f6a5c4761945252d523b",
+  "source_branch": "codex/soc-joint-20261111",
+  "twelve_cold_classes_passed": true,
+  "normal_codes": 76032,
+  "reset_recovery_codes": 6336,
+  "task_cycles": 2783869,
+  "conditional_throughput_at_unverified_150MHz": 53.88184573340197,
+  "new_area_mm2": null,
+  "power_mW": null,
+  "energy_uJ": null,
+  "actual_server_deployed": false,
+  "cache_reuse": [
+    "mapped accelerator",
+    "mapped e203_cpu_top including NICE and TCM"
+  ],
+  "newly_mapped": [
+    "original System Bus wrappers",
+    "upstream arbitration",
+    "ICB loader adapter",
+    "shared SRAM controller without direct host port",
+    "other platform wrapper logic"
+  ],
+  "official_QA_sha256": "706a5d60765f577a5c56c3cbd389da652badbe7bde8ffa574309aef7b6516e30",
+  "evidence_sha256": {
+    "testdata/sysbus_v1_20261113_rtl_v2/summary.json": "238d6e2734f9305f260994e48abc20114e0114cdbb7948dd5786a0e4501202ea",
+    "testdata/sysbus_v1_20261113_rtl_v2/cold/run.log": "b6fe918d22849912878a41ae30ccc682f1c2c0f015817b8c6ed1f0635769f146",
+    "testdata/sysbus_v1_20261113_rtl_v2/recovery/run.log": "c891cd67c3825acb538022d8fd777cb4cc413e44aeb31ff608c2f8e74aaeec5a",
+    "testdata/sysbus_v1_20261113_other_classes/summary.json": "988054b86d3aa6767832a6a6af42ee7286fd7fdc319fde77b5c62afd4732a98d",
+    "testdata/sysbus_v1_20261113_other_classes/inputs.json": "dca3a60e43a2d7c4b87527777ae906958404cb07654b43c8de97236a5aa0f11b",
+    "deliverables/sysbus_v1_20261113_first_release_v2/release.json": "aa4fdc4a6f0dd9973e11e99f6e4bec2530bfeca8355f6228c61f55345289e731",
+    "deliverables/sysbus_v1_20261113_first_release_v2/qualification.json": "8fd23874ac3cf8be39f06a323c3bcacf76dbc90b538a6d09b73ecea2391062eb",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_PART_00.py": "eeb286071ae4529fc51bb4a6d841dac41ce9866844887a2c6fa1d8080cb4d5aa",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_PART_01.py": "68e306101a153d23eb6945e80e0af370be6bf66f9a6aa525e9d3453796a9c621",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_PART_02.py": "434b8e6378fed413bb06335f59041fb6afcf7b16500d1e0612c8f5071edc8258",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_PART_03.py": "0311c3208a1b5a514f5499e887db7ea0dde03e5f8e49a0f9d706c9d8e8798a93",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_PART_04.py": "1a87463364b606efcf0ea642041af4cba94d541043ab653d6dc3f83f93dc1f28",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_PART_05.py": "18be2ab388eb773afce6db1200df0d74f4878d4262b276d203a7ab3451024518",
+    "deliverables/sysbus_v1_20261113_first_release_v2/PASTE_START.py": "4b5ca56375120783db6d784a9b139b766aabbcb37863caffaf6ecbd07317b186",
+    "testdata/sysbus_v1_20261113_other_classes/case_01/run.log": "f669e4162e93b801d401186358696a0e5934471fc88049d1693b3a97f422edec",
+    "testdata/sysbus_v1_20261113_other_classes/case_02/run.log": "ea1198fdbddededfae281cfac320c7fac9f88638d34c4b45f75cbd2d9990d522",
+    "testdata/sysbus_v1_20261113_other_classes/case_03/run.log": "c1c1f40361f04e86cd14fd731ae359290ff2858781e401f5ac408768ff034bbf",
+    "testdata/sysbus_v1_20261113_other_classes/case_04/run.log": "236324f93926f6ad27ad3bfdd656af5dfa093a99301e2161834b5fb1a4731a4f",
+    "testdata/sysbus_v1_20261113_other_classes/case_05/run.log": "ab75477a69ee0dc5c5d8eac39e3c15a8473971a57bd76606b54c0131605a27df",
+    "testdata/sysbus_v1_20261113_other_classes/case_06/run.log": "67f88afc3fc85da203345f027e7313f6e5ab6ed470b088750970aea05128af7d",
+    "testdata/sysbus_v1_20261113_other_classes/case_07/run.log": "7ccedce22756777a86948e94fbe5e7c939e3177b45ab2cf9ae457e3010ba1ad0",
+    "testdata/sysbus_v1_20261113_other_classes/case_08/run.log": "e17ea824c9dc49e8b2bfa8805ca1c3ad4ad10966fa6ec1d750dc711724ed9bbe",
+    "testdata/sysbus_v1_20261113_other_classes/case_09/run.log": "5f254e305c18269ef95f302c0f26d77b6f7243ba47d5ec1b228b9cb3a2e0616f",
+    "testdata/sysbus_v1_20261113_other_classes/case_10/run.log": "8b8af4e5130299bf57a98b2356891ce3d7b7412a8d2b82cda1cb94ad89f098bb",
+    "testdata/sysbus_v1_20261113_other_classes/case_11/run.log": "515e0520e8403aaf4a96c680719e6b826f67f912f2d1927c632de8f94cb03bae"
+  }
+}

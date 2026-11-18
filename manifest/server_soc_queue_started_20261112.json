@@ -1,0 +1,13 @@
+{
+  "evidence": "user screenshot codex-clipboard-b7668e56-f4e9-4d05-98c5-75e70fc12eba.png",
+  "observed_stage": "waiting_for_running_input16_DC",
+  "stage_entered_UTC": "2026-11-12T11:05:26Z",
+  "stage_entered_Asia_Shanghai": "2026-11-12 19:05:26 +08:00",
+  "source": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_parallel_max_20261112_input16_595724b/input16_fast",
+  "queue_started_on_server": true,
+  "source_DC_completion_confirmed": false,
+  "platform_mapping_started": false,
+  "actual_SoC_power_mW": null,
+  "actual_input16_area_mm2": null,
+  "observation_limit": "single screenshot confirms recorded waiting stage, not a live process heartbeat"
+}

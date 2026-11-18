@@ -1,0 +1,11 @@
++incdir+rtl/v1/generated
+rtl/micro/mul_pipe.sv
+rtl/micro/rne_pipe.sv
+rtl/v1/kwt_sram_sp.sv
+rtl/v1/kwt_mac8x8.sv
+rtl/v1/kwt_iterative.sv
+rtl/v1/kwt_math.sv
+rtl/v1/kwt_packet_loader.sv
+rtl/v1/kwt_layer_banked.sv
+rtl/v1/kwt1_accel.sv
+rtl/v1/kwt1_mmio.sv

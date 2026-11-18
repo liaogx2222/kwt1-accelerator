@@ -1,0 +1,5 @@
+# CPU-only R1/R2/RTL evidence environment: CPython 3.10.9 (64 bit).
+# No torch/CUDA/scipy required for this fixed-profile replay.
+numpy==1.26.2
+# External functional simulator: Icarus Verilog 12.0 devel
+# s20150603-1539-g2693dd32b; tool executables are hashed in provenance.

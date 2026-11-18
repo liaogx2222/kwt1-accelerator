@@ -1,0 +1,45 @@
+{
+  "fix_id": "DC_DECL_ORDER_V1",
+  "paste_bytes": 5458,
+  "paste_sha256": "0bf4ea375992906e30d0ba415350333b5edef1b72fa4533644192b89d8645acf",
+  "projects": [
+    "overlap",
+    "refine",
+    "writeback"
+  ],
+  "parent_batch_manifest_sha256": "413ae9d066a7bf0eddc73ffc5feadcae9d57bd154746ad27251435d9bba3015c",
+  "verification": "testdata/parallel_decl_retry_20261112_v2/summary.json",
+  "producer_matches_retry_rtl": true,
+  "baseline_source_unchanged": true,
+  "actual_DC_validation_pending": true,
+  "whole_SoC_PPA": false,
+  "power_mW": null,
+  "area_mm2": null,
+  "validation_result": {
+    "passed": true,
+    "Python36_syntax": true,
+    "old_batch_and_baseline_preserved": true,
+    "exact_two_declaration_lines_relocated": true,
+    "other_all_project_files_byte_identical": true,
+    "three_project_manifest_and_batch_check": true,
+    "source_drift_and_existing_target_refused": true,
+    "no_old_build_or_lock_copied": true,
+    "three_project_dry_run": true,
+    "native_Verilator_production_lint": [
+      "overlap/original",
+      "overlap/fixed",
+      "refine/original",
+      "refine/fixed",
+      "writeback/original",
+      "writeback/fixed"
+    ],
+    "actual_DC_PT_execution": false,
+    "numerical_regression_rerun": false,
+    "scope": "source relocation, parsing and isolated deployment"
+  },
+  "tools_sha256": {
+    "scripts\\retry_parallel_declarations.py": "0bf4ea375992906e30d0ba415350333b5edef1b72fa4533644192b89d8645acf",
+    "scripts\\check_declaration_retry.py": "969555775d26d0198cf82c29cca7ce1a384e30dc91045b61bc6f37be07c8be16",
+    "scripts\\export_parallel_batch.py": "b421cc0cc995a43cd20e92f85db463eb5bcb1a9ad4635b0fd084b96cab9874a1"
+  }
+}

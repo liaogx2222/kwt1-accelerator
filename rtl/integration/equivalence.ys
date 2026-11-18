@@ -1,0 +1,33 @@
+# Optional compositional proof. External macro pins are cut into shared inputs
+# and observed outputs; the SRAM transition contract is tested separately.
+read_verilog -sv -DKWT_TECH_SRAM -Irtl/v2/generated rtl/v2/kwt_tech_sram_blackbox.sv rtl/micro/mul_pipe.sv rtl/micro/rne_pipe.sv rtl/v2/kwt_sram_sp.sv rtl/v2/kwt_mac8x8.sv rtl/v2/kwt_iterative.sv rtl/v2/kwt_math.sv rtl/v2/kwt_packet_loader.sv rtl/v2/kwt_layer_banked.sv rtl/v2/kwt1_accel.sv rtl/v2/kwt1_mmio.sv
+hierarchy -check -top kwt1_mmio
+proc
+opt
+wreduce
+opt_clean
+flatten
+memory_map
+expose -evert t:kwt_tech_sram_4096x16
+delete t:$scopeinfo
+rename kwt1_mmio gold
+design -stash gold
+design -reset
+read_json testdata/rtl_v2/release/synth/generic.json
+hierarchy -check -top kwt1_mmio
+expose -evert t:kwt_tech_sram_4096x16
+delete t:$scopeinfo
+rename kwt1_mmio gate
+design -stash gate
+design -reset
+design -copy-from gold -as gold gold
+design -copy-from gate -as gate gate
+equiv_make gold gate equiv
+hierarchy -check -top equiv
+async2sync
+opt_clean
+equiv_struct -icells -fwd -maxiter 5
+equiv_simple -short -seq 1
+equiv_status
+equiv_induct -seq 2
+equiv_status -assert

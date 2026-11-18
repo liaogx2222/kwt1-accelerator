@@ -1,0 +1,278 @@
+{
+  "checkpoint": "E:\\project\\ChipCompetition\\keyword-transformer\\models_data_v2_12_labels\\kwt1\\best_weights",
+  "data_dir": "E:\\project\\ChipCompetition\\keyword-transformer\\data2",
+  "parameter_count": 607308,
+  "labels": [
+    "_silence_",
+    "_unknown_",
+    "yes",
+    "no",
+    "up",
+    "down",
+    "left",
+    "right",
+    "on",
+    "off",
+    "stop",
+    "go"
+  ],
+  "testing_samples": 4890,
+  "correct": 4770,
+  "accuracy": 0.9754601226993865,
+  "accuracy_percent": 97.54601226993866,
+  "confusion_matrix_rows_true_cols_pred": [
+    [
+      408,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      388,
+      0,
+      3,
+      3,
+      2,
+      1,
+      1,
+      3,
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      0,
+      418,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      397,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      407,
+      0,
+      0,
+      0,
+      2,
+      10,
+      3,
+      1
+    ],
+    [
+      0,
+      6,
+      1,
+      4,
+      0,
+      389,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      408,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0,
+      2,
+      2,
+      388,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      0,
+      0,
+      4,
+      1,
+      0,
+      0,
+      384,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      6,
+      0,
+      0,
+      5,
+      0,
+      1,
+      0,
+      4,
+      385,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      410,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      9,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      388
+    ]
+  ],
+  "per_class": [
+    {
+      "label": "_silence_",
+      "samples": 408,
+      "correct": 408,
+      "accuracy": 1.0
+    },
+    {
+      "label": "_unknown_",
+      "samples": 408,
+      "correct": 388,
+      "accuracy": 0.9509803921568627
+    },
+    {
+      "label": "yes",
+      "samples": 419,
+      "correct": 418,
+      "accuracy": 0.9976133651551312
+    },
+    {
+      "label": "no",
+      "samples": 405,
+      "correct": 397,
+      "accuracy": 0.980246913580247
+    },
+    {
+      "label": "up",
+      "samples": 425,
+      "correct": 407,
+      "accuracy": 0.9576470588235294
+    },
+    {
+      "label": "down",
+      "samples": 406,
+      "correct": 389,
+      "accuracy": 0.958128078817734
+    },
+    {
+      "label": "left",
+      "samples": 412,
+      "correct": 408,
+      "accuracy": 0.9902912621359223
+    },
+    {
+      "label": "right",
+      "samples": 396,
+      "correct": 388,
+      "accuracy": 0.9797979797979798
+    },
+    {
+      "label": "on",
+      "samples": 396,
+      "correct": 384,
+      "accuracy": 0.9696969696969697
+    },
+    {
+      "label": "off",
+      "samples": 402,
+      "correct": 385,
+      "accuracy": 0.9577114427860697
+    },
+    {
+      "label": "stop",
+      "samples": 411,
+      "correct": 410,
+      "accuracy": 0.9975669099756691
+    },
+    {
+      "label": "go",
+      "samples": 402,
+      "correct": 388,
+      "accuracy": 0.9651741293532339
+    }
+  ],
+  "evaluation": {
+    "batch_size": 100,
+    "background_frequency": 0.0,
+    "background_volume": 0.0,
+    "time_shift_samples": 0,
+    "resample_offset": 0.0,
+    "volume_augmentation_offset": 0.0,
+    "silence_percentage": 10.0,
+    "unknown_percentage": 10.0,
+    "split_rule": "repository AudioProcessor / which_set"
+  }
+}

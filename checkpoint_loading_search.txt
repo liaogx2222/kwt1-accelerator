@@ -1,0 +1,89 @@
+﻿
+  kws_streaming\train\base_parser.py:175:      default=100,
+  kws_streaming\train\base_parser.py:176:      help='Save model checkpoint every save_steps.')
+  kws_streaming\train\base_parser.py:177:  parser.add_argument(
+> kws_streaming\train\base_parser.py:178:      '--start_checkpoint',
+  kws_streaming\train\base_parser.py:179:      type=str,
+  kws_streaming\train\base_parser.py:180:      default='',
+  kws_streaming\train\base_parser.py:181:      help='If specified, restore this pretrained model before any training.')
+  kws_streaming\train\base_parser.py:182:
+  kws_streaming\train\base_parser.py:183:  # Function used to parse --verbosity argument
+  kws_streaming\train\test.py:217:    flags,
+  kws_streaming\train\test.py:218:    folder,
+  kws_streaming\train\test.py:219:    time_shift_samples=0,
+> kws_streaming\train\test.py:220:    weights_name='best_weights',
+  kws_streaming\train\test.py:221:    accuracy_name='tf_non_stream_model_accuracy.txt'):
+  kws_streaming\train\test.py:222:  """Compute accuracy of non streamable model using TF.
+  kws_streaming\train\test.py:223:
+  kws_streaming\train\test.py:224:  Args:
+  kws_streaming\train\test.py:225:      flags: model and data settings
+  kws_streaming\train\test.py:296:def tf_stream_state_internal_model_accuracy(
+  kws_streaming\train\test.py:297:    flags,
+  kws_streaming\train\test.py:298:    folder,
+> kws_streaming\train\test.py:299:    weights_name='best_weights',
+  kws_streaming\train\test.py:300:    accuracy_name='tf_stream_state_internal_model_accuracy_sub_set.txt',
+  kws_streaming\train\test.py:301:    max_test_samples=1000):
+  kws_streaming\train\test.py:302:  """Compute accuracy of streamable model with internal state using TF.
+  kws_streaming\train\test.py:303:
+  kws_streaming\train\test.py:304:  Testign model with batch size 1 can be slow, so accuracy is evaluated
+  kws_streaming\train\test.py:393:def tf_stream_state_external_model_accuracy(
+  kws_streaming\train\test.py:394:    flags,
+  kws_streaming\train\test.py:395:    folder,
+> kws_streaming\train\test.py:396:    weights_name='best_weights',
+  kws_streaming\train\test.py:397:    accuracy_name='stream_state_external_model_accuracy_sub_set.txt',
+  kws_streaming\train\test.py:398:    reset_state=False,
+  kws_streaming\train\test.py:399:    max_test_samples=1000):
+  kws_streaming\train\test.py:400:  """Compute accuracy of streamable model with external state using TF.
+  kws_streaming\train\test.py:401:
+  kws_streaming\train\test.py:715:                         folder,
+  kws_streaming\train\test.py:716:                         mode,
+  kws_streaming\train\test.py:717:                         fname,
+> kws_streaming\train\test.py:718:                         weights_name='best_weights',
+  kws_streaming\train\test.py:719:                         optimizations=None):
+  kws_streaming\train\test.py:720:  """Convert model to streaming and non streaming TFLite.
+  kws_streaming\train\test.py:721:
+  kws_streaming\train\test.py:722:  Args:
+  kws_streaming\train\test.py:723:      flags: model and data settings
+  kws_streaming\train\test.py:754:    logging.warning('FAILED to convert to mode %s, tflite: %s', mode, e)
+  kws_streaming\train\test.py:755:
+  kws_streaming\train\test.py:756:
+> kws_streaming\train\test.py:757:def convert_model_saved(flags, folder, mode, weights_name='best_weights'):
+  kws_streaming\train\test.py:758:  """Convert model to streaming and non streaming SavedModel.
+  kws_streaming\train\test.py:759:
+  kws_streaming\train\test.py:760:  Args:
+  kws_streaming\train\test.py:761:      flags: model and data settings
+  kws_streaming\train\test.py:762:      folder: folder where converted model will be saved
+  kws_streaming\train\train.py:131:
+  kws_streaming\train\train.py:132:  sess.run(tf.global_variables_initializer())
+  kws_streaming\train\train.py:133:
+> kws_streaming\train\train.py:134:  if flags.start_checkpoint:
+> kws_streaming\train\train.py:135:    model.load_weights(flags.start_checkpoint).expect_partial()
+> kws_streaming\train\train.py:136:    logging.info('Weights loaded from %s', flags.start_checkpoint)
+  kws_streaming\train\train.py:137:
+> kws_streaming\train\train.py:138:  if teacher_flags and teacher_flags.start_checkpoint:
+  kws_streaming\train\train.py:139:    # Load weights into teacher base as this is the actual model that was saved, tea
+cher includes hard label head
+> kws_streaming\train\train.py:140:    teacher_base.load_weights(teacher_flags.start_checkpoint).assert_existing_object
+s_matched()
+> kws_streaming\train\train.py:141:    logging.info('Distillation teacher weights loaded from %s', teacher_flags.start_
+checkpoint)
+  kws_streaming\train\train.py:142:
+  kws_streaming\train\train.py:143:  start_step = 0
+  kws_streaming\train\train.py:144:
+  kws_streaming\train\train.py:145:  logging.info('Training from step: %d ', start_step)
+  kws_streaming\train\train.py:146:
+  kws_streaming\train\train.py:273:      if total_accuracy >= best_accuracy:
+  kws_streaming\train\train.py:274:        best_accuracy = total_accuracy
+  kws_streaming\train\train.py:275:        # overwrite the best model weights
+> kws_streaming\train\train.py:276:        model.save_weights(flags.train_dir + 'best_weights')
+  kws_streaming\train\train.py:277:      logging.info('So far the best validation accuracy is %.2f%%',
+  kws_streaming\train\train.py:278:                   (best_accuracy * 100))
+  kws_streaming\train\train.py:279:
+  kws_streaming\train\train.py:280:  tf.keras.backend.set_learning_phase(0)
+  kws_streaming\train\train.py:281:  set_size = audio_processor.set_size('testing')
+  kws_streaming\train\train.py:301:               *(total_accuracy * 100, set_size))
+  kws_streaming\train\train.py:302:  with open(os.path.join(flags.train_dir, 'accuracy_last.txt'), 'wt') as fd:
+  kws_streaming\train\train.py:303:    fd.write(str(total_accuracy * 100))
+> kws_streaming\train\train.py:304:  model.save_weights(flags.train_dir + 'last_weights')
+
+

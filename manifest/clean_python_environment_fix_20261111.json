@@ -1,0 +1,97 @@
+{
+  "bytes": 5872,
+  "sha256": "da8a7cebd78a31541505aa72589a07420cb75041f86a14582a839634c36fec27",
+  "chunks": 6,
+  "base_revision": "fc04cb66be9b85b222895528d6a79714a4d5f465",
+  "revision": "524a7626de53c673d993e7abce8fd9dc81cb387f",
+  "changed": [
+    "flow/README.md",
+    "flow/dc.tcl",
+    "flow/project.tcl",
+    "flow/pt.tcl"
+  ],
+  "old_manifest": "728cba186141af2a1dc34f4c390a8a7c17ec85eb0645837c90d16e520326e22d",
+  "new_manifest": "f731ed1f26e7cf4b74df948e283261183ff7bff8f2928a67f132e8748171c55e",
+  "reported_server_error": "KWT_FATAL python3: symbol lookup error: python3: undefined symbol: _Py_LegacyLocaleDetected",
+  "server_retry_pending": true,
+  "checks": {
+    "host_python": {
+      "passed": true,
+      "child_environment_clean": true,
+      "parent_environment_preserved": true,
+      "child_failure_propagated": true,
+      "argument_forwarding": true,
+      "EDA_execution": false,
+      "scope": "Tcl exec adapter checked; real env utility and DC library loader require server retry"
+    },
+    "faults": {
+      "passed": true,
+      "fault_cases": {
+        "missing_env": [
+          ""
+        ],
+        "analyze": [
+          "work",
+          "analyze"
+        ],
+        "link": [
+          "work",
+          "analyze",
+          "elaborate",
+          "link"
+        ],
+        "compile": [
+          "work",
+          "analyze",
+          "elaborate",
+          "link",
+          "compile"
+        ],
+        "generic": [
+          "work",
+          "analyze",
+          "elaborate",
+          "link",
+          "compile"
+        ]
+      },
+      "EDA_execution": false,
+      "scope": "standard Tcl with mocked tool commands; actual DC retry required"
+    },
+    "delta_installer": {
+      "passed": true,
+      "python36_syntax": true,
+      "line_delta_verified": true,
+      "failed_log_preserved": true,
+      "idempotent": true,
+      "RTL_unchanged": true,
+      "EDA_execution": false
+    },
+    "guards": {
+      "passed": true,
+      "source_chunks": 63,
+      "archives_verified": 2,
+      "source_fixture_import": true,
+      "python36_syntax": true,
+      "modified_source_rejected": true,
+      "stale_netlist_rejected": true,
+      "unmapped_netlist_rejected": true,
+      "missing_env_rejected": true,
+      "missing_library_rejected": true,
+      "synthetic_guard_checks_only": true,
+      "EDA_execution": false
+    }
+  },
+  "retry": {
+    "retry": "pyenv01",
+    "parts": 6,
+    "bytes": 5872,
+    "sha256": "da8a7cebd78a31541505aa72589a07420cb75041f86a14582a839634c36fec27",
+    "remote_filename": "apply_flowfix_pyenv01.py",
+    "command_file": "commands_pyenv01.csh.txt",
+    "command_file_sha256": "516757df4ee2cb8eeb6f05692956f13e79bc881b196e7289e6cf542a3918eef1",
+    "reconstructed": true,
+    "truncation_rejected": true,
+    "installer_unchanged": true
+  }
+}

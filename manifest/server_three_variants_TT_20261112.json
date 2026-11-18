@@ -1,0 +1,53 @@
+{
+  "source": "user screenshot 11711bd4-35fc-41e4-a0aa-3278a452d13d 2026-11-12",
+  "server_batch": "kwt_parallel_max_20261112_decl_v1",
+  "corner": "TT",
+  "display_precision_only": true,
+  "scope": "accelerator partition area plus TT timing; no full SoC power",
+  "results": {
+    "overlap": {
+      "stage": "reports_done",
+      "total_area_mm2": 1.357049639198,
+      "private_macro_area_mm2": 0.550346328125,
+      "standard_cell_area_mm2": 0.8067033110730001,
+      "TT_async_max_slack_ns": 1.85,
+      "TT_clk_setup_slack_ns": 2.02,
+      "TT_async_min_slack_ns": -0.19,
+      "TT_clk_min_slack_ns": -0.16,
+      "TT_async_min_violations": 209,
+      "TT_clk_min_violations": 629,
+      "hold_remediation": "deferred",
+      "full_SoC_power_mW": null
+    },
+    "refine": {
+      "stage": "reports_done",
+      "total_area_mm2": 1.353774638807,
+      "private_macro_area_mm2": 0.550346328125,
+      "standard_cell_area_mm2": 0.8034283106819999,
+      "TT_async_max_slack_ns": 0.75,
+      "TT_clk_setup_slack_ns": 1.72,
+      "TT_async_min_slack_ns": -0.17,
+      "TT_clk_min_slack_ns": -0.16,
+      "TT_async_min_violations": 290,
+      "TT_clk_min_violations": 248,
+      "hold_remediation": "deferred",
+      "full_SoC_power_mW": null
+    },
+    "writeback": {
+      "stage": "reports_done",
+      "total_area_mm2": 1.369691546981,
+      "private_macro_area_mm2": 0.550346328125,
+      "standard_cell_area_mm2": 0.8193452188560001,
+      "TT_async_max_slack_ns": 3.08,
+      "TT_clk_setup_slack_ns": 2.0,
+      "TT_async_min_slack_ns": -0.17,
+      "TT_clk_min_slack_ns": -0.16,
+      "TT_async_min_violations": 292,
+      "TT_clk_min_violations": 211,
+      "hold_remediation": "deferred",
+      "full_SoC_power_mW": null
+    }
+  },
+  "writeback_area_increase_vs_refine_percent": 1.175742824376358,
+  "input16_area_not_inferred": true
+}

@@ -1,0 +1,17 @@
+# Map the two added blocks at their existing CPU/bridge interface boundaries.
+read_liberty -lib third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+read_verilog -sv -I../e203_hbirdv2/rtl/e203/core rtl/block_transfer/kwt_e203_block_write.sv
+design -save source
+synth -top e203_subsys_nice_core -noabc
+dfflibmap -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+clean
+check -assert
+stat -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+design -load source
+synth -top kwt_block_write_response -noabc
+dfflibmap -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib
+clean
+check -assert
+stat -liberty third_party/nangate45_reference/lib/NangateOpenCellLibrary_typical.lib

@@ -1,0 +1,14 @@
+{
+  "transport": "VNC terminal; FTP unavailable both ways",
+  "base_revision": "e4a8981f022a0e0b503a4d3aff80fca13c94f178",
+  "target_revision": "2b2dc171a1601d955609bc65db1ca4b00ff0c7a1",
+  "command_file": "deliverables/reset_anchor_delta_20261111/VNC_INSTALL_FROM_E4.csh.txt",
+  "command_file_sha256": "e18cd00d8a40f0056a83d3af7a6921cbaf22a7ccf38f374ab2b6cfccdcc0ea1a",
+  "payload_bytes": 4558,
+  "payload_sha256": "5801fa2f34d38d903256c17c4fe4b785843e2d984e4a1a1474f78fdca5641f85",
+  "parts": 8,
+  "preserved_parent_sources": true,
+  "transfer_subdirectory": "vnc_anchor_2b2dc17",
+  "target_directory": "kwt_ret1n_reset_2b2dc17_20261111",
+  "server_executed": false
+}

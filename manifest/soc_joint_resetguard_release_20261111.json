@@ -1,0 +1,40 @@
+{
+  "revision": "0e308fde7f5358da4f4543f5208f239f0b03d0dd",
+  "development_dirty": false,
+  "files": 197,
+  "cpu_files": 134,
+  "bytes": 35133,
+  "sha256": "4cc26087dbcb046f89c952f8c65abfdb801bced676d4794b6d8c6b21f85218fa",
+  "parts": 59,
+  "full_bytes": 1323992,
+  "full_sha256": "40679a75adeba0d144fdc1c0307d2357f447bd652d237aff12eb06d2470fc877",
+  "ROM_bytes": 572,
+  "package_checks": {
+    "passed": true,
+    "relocated_import": true,
+    "CRLF_normalization": true,
+    "source_tamper_rejected": true,
+    "unique_actual_ROM": true,
+    "absolute_compile_paths": true,
+    "python36": true,
+    "EDA_execution": false
+  },
+  "campaign": "manifest/soc_joint_resetguard_campaign_20261111.json",
+  "unit_memory_checks": 8,
+  "extra_CRC_recovery_metrics": [
+    0,
+    11891210,
+    1774689,
+    116377,
+    190941,
+    189328,
+    13,
+    1584,
+    190924
+  ],
+  "performance_scope": "normal twelve-class tasks only; separate CRC recovery is not averaged into throughput",
+  "server_VCS_verified": false,
+  "ASIC_clock_gating_verified": false,
+  "physical_signoff": false,
+  "previous_event_crosscheck": "manifest/soc_joint_release_20261111.json: pre-resetguard Verilator event-driven, not current VCS"
+}

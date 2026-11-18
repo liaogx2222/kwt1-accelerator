@@ -1,0 +1,10 @@
+# Build/replay: Python >=3.10 standard library only; no ISS is used.
+# Full-project independent integer recomputation:
+numpy==1.26.2
+# Validated Windows native toolchain (not pip-installed by the flow):
+# xPack riscv32-unknown-elf GCC 15.2.0; rv32imac_zicsr/ilp32
+# Verilator Python wheel 5.48.0, bundled binary revision 4e853d8 (version says UNKNOWN)
+# Zig 0.13.0 / Clang 18.1.6; C++17 -O3
+# Icarus 12 development build; generic YoWASP Yosys 0.69
+# Exact tool/runtime SHA256 are bound by the reference evidence toolchain.json.
+# CPU: e203_hbirdv2 9f3e34f337f5d0a1236a285871ffa2032491617a, Apache-2.0.

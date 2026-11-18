@@ -1,0 +1,159 @@
+{
+  "provenance": "user screenshots; rounded displayed QoR values",
+  "PT_reports_done": true,
+  "STA_accepted": false,
+  "QoR_columns": [
+    "slack_ns",
+    "TNS_ns",
+    "violating_paths"
+  ],
+  "QoR": {
+    "ff": {
+      "async_max": [
+        1.19,
+        0,
+        0
+      ],
+      "clock_max": [
+        2.61,
+        0,
+        0
+      ],
+      "async_min": [
+        -0.16,
+        -21.84,
+        173
+      ],
+      "clock_min": [
+        -0.14,
+        -55.46,
+        1592
+      ]
+    },
+    "ss": {
+      "async_max": [
+        -7.44,
+        -4943.28,
+        1681
+      ],
+      "clock_max": [
+        0,
+        0,
+        0
+      ],
+      "async_min": [
+        -0.22,
+        -19.98,
+        173
+      ],
+      "clock_min": [
+        -0.12,
+        -0.55,
+        10
+      ]
+    },
+    "tt": {
+      "async_max": [
+        -1.64,
+        -441.83,
+        422
+      ],
+      "clock_max": [
+        2.08,
+        0,
+        0
+      ],
+      "async_min": [
+        -0.17,
+        -20.54,
+        173
+      ],
+      "clock_min": [
+        -0.14,
+        -3.52,
+        202
+      ]
+    }
+  },
+  "SS_coverage": {
+    "setup": [
+      31171,
+      30051,
+      0,
+      1120
+    ],
+    "hold": [
+      31171,
+      30041,
+      10,
+      1120
+    ],
+    "recovery": [
+      4863,
+      3182,
+      1681,
+      0
+    ],
+    "removal": [
+      4863,
+      4690,
+      173,
+      0
+    ],
+    "min_period": [
+      640,
+      0,
+      0,
+      640
+    ],
+    "min_pulse_width": [
+      64869,
+      60006,
+      0,
+      4863
+    ],
+    "out_setup": [
+      36,
+      36,
+      0,
+      0
+    ],
+    "out_hold": [
+      36,
+      36,
+      0,
+      0
+    ],
+    "all": [
+      137649,
+      128042,
+      1864,
+      7743
+    ]
+  },
+  "coverage_columns": [
+    "total",
+    "met",
+    "violated",
+    "untested"
+  ],
+  "mapped_lint": {
+    "unconnected_ports": 536,
+    "shorted_outputs": 4,
+    "connected_power_ground": 81,
+    "same_cell_multi_pin_nets": 42,
+    "unloaded_nets": 443,
+    "all_exceptions_adjudicated": false
+  },
+  "gate_compile_failed": true,
+  "gate_error_pin": "RET1N",
+  "pin_confirmed_by_user": true,
+  "previous_RETIN_nine_pin_assumption": "incorrect; superseded",
+  "SRAM_untested_1120_reason_confirmed": false,
+  "screenshot_sha256": {
+    "qor": "279824e07854e3cc5b025f615d8f00235893dba1fe062914a2aca42ced77a6b0",
+    "mapped_lint": "8ef6181eafede7e7d135b148dfe93f42d881d9bd9e7a7d76acf91df74f284abf",
+    "coverage": "f0bba0454c63d301281f207ae618eda7738b4fd961907011ffeef8fb3cee6875",
+    "gate_ret1n_failure": "f8f20ae7f71e15167306ab457bfe6e3135373c1dbf4ed7995ae9ef81f3acccb1"
+  }
+}

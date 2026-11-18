@@ -1,0 +1,5 @@
+read_verilog -sv rtl/micro/rne_pipe.sv rtl/block_transfer/kwt_rne_dense_right.sv rtl/block_transfer/rne_dense_miter.sv
+prep -top rne_dense_miter -flatten
+async2sync
+opt
+sat -seq 4 -set legal 1 -set-at 1 rst_n 0 -set-def-inputs -prove same 1 -prove-skip 1 -verify

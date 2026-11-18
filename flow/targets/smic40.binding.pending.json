@@ -1,0 +1,19 @@
+{
+  "target": "smic40_unbound",
+  "top": "kwt1_mmio",
+  "clock": {"port": "clk", "period_ns": 6.666667, "uncertainty_ns": null, "source": null},
+  "sram": {
+    "instances": 20, "depth": 4096, "width": 16,
+    "boundary_module": "kwt_tech_sram_4096x16",
+    "wrapper_rtl": null, "behavior_models": [],
+    "physical_cell": null, "area_per_instance_um2": null,
+    "pin_map": {}, "read_latency_cycles": 1,
+    "read_output_holds": true, "write_preserves_read_output": true,
+    "source": null
+  },
+  "corners": [],
+  "io": {"input_delay_ns": {}, "output_delay_ns": {}, "reset_constraints": null, "source": null},
+  "exceptions": [],
+  "constraints_sdc": null,
+  "note": "Template only. Library units/PVT, pin polarity and timing require authorized platform/library evidence. Never infer these from 40nm."
+}
