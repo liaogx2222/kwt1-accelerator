@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""汇总生成最新版作品设计报告 DOCX。"""
+"""汇总生成最新版技术报告 DOCX。"""
 import os
 import sys
 
@@ -12,15 +12,17 @@ import current
 import part4
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                   "30022_uv_KWT1_作品设计报告_LN4优化版.docx")
+                   "KWT1_Technical_Report_LN4.docx")
 
 
 def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     R = Report(body_pt=10.5)
-    R.doc.core_properties.author = "uv"
-    R.doc.core_properties.title = "KWT1 作品设计报告 LN4 优化版"
-    R.header_footer("2026 年全国大学生嵌入式芯片与系统设计竞赛（芯片设计赛道）· 作品设计报告")
+    R.doc.core_properties.author = "KWT-1"
+    R.doc.core_properties.title = "KWT1 Technical Report（LN4 优化版）"
+    R.header_footer("KWT1 Technical Report · 整数 Transformer 加速器设计与实测")
+    # 封面不显示页眉页脚
+    R.doc.sections[0].different_first_page_header_footer = True
     part1.cover(R)
     current.abstract(R)
     part1.toc(R)

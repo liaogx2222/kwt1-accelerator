@@ -93,7 +93,7 @@ def sha(p):
  with p.open('rb') as f:
   for b in iter(lambda:f.read(1048576),b''):h.update(b)
  return h.hexdigest()
-parent=Path('/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112')
+parent=Path('/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112')
 target=parent.parent/'kwt_sysbus_v1_20261113_r1'
 assert not target.exists(),'PRESERVE_EXISTING_SYSBUS_CANDIDATE'
 manifest=json.loads((parent/'manifest.json').read_text())

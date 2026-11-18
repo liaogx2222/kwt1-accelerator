@@ -5,7 +5,7 @@
   "goal": "SMIC40 complete digital SoC physical implementation and complete merged layout",
   "top": "kwt_soc_joint",
   "reference": {
-    "server_project": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_sysbus_v1_20261113_r3",
+    "server_project": "/path/to/project/kwt_sysbus_v1_20261113_r3",
     "candidate_relative": "review_tools/timing_closure_v6/finish_vt",
     "netlist_relative": "dc/mapped.v",
     "netlist_sha256": "f38a79d45a1ad939eb056d7b12f1da747d6755183315e3b5a2cd1b932c2f5506",

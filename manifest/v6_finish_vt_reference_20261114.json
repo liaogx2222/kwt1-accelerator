@@ -82,7 +82,7 @@
     "post_layout": false,
     "SDF_annotated": false,
     "twelve_case_gate_campaign": false,
-    "report_directory": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_sysbus_v1_20261113_r3/review_tools/v6_power_v1_20261113_180332/pt_20261114_092344",
+    "report_directory": "/path/to/project/kwt_sysbus_v1_20261113_r3/review_tools/v6_power_v1_20261113_180332/pt_20261114_092344",
     "interconnect_and_SRAM_power_review_required": true
   },
   "qualification": {
@@ -184,7 +184,7 @@
     "evidence": "docs/architecture/evidence/v6_recovery_20261115/result_json_screenshot_transcription.json",
     "completion_CST": "2026-11-15 09:53:00 +0800",
     "stage": "v6_reset_recovery_passed_CDC_and_model_review_remain",
-    "result_path": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_sysbus_v1_20261113_r3/review_tools/v6_power_v1_20261113_180332/postcheck_v1/recovery/result.json",
+    "result_path": "/path/to/project/kwt_sysbus_v1_20261113_r3/review_tools/v6_power_v1_20261113_180332/postcheck_v1/recovery/result.json",
     "same_cycles_as_cold": true,
     "successful_task_cycles": 2783869,
     "scope": "one in-flight reset followed by complete case0 cold recovery; complete result JSON content received as screenshot",

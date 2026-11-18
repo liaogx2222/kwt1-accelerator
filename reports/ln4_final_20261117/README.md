@@ -1,9 +1,9 @@
-# KWT1 作品设计报告 — LN4 优化版
+# KWT1 Technical Report
 
-2026-11-17 定稿。以 `reports/submission_review_20261113` 为底稿，把周期与吞吐从 System Bus v1 的
-门级实测值替换为 LN4 合并版的全 SoC RTL 实测值，其余章节、图表与版式保持不变。
+2026-11-18 定稿。报告正文由脚本生成，不是手写文档：`facts.py` 是唯一数字源，`part1.py` / `part2.py` /
+`current.py` / `part4.py` 生成正文，`build.py` 出 DOCX，`export_pdf.py` 经 Word COM 更新目录并导出 PDF。
 
-## 本版数据来源
+## 数据来源
 
 - 仿真：Verilator 5.48 编译完整 SoC（真实 E203 + 固定 ROM + 加速器 + 100 宏契约模型），
   case 0 冷任务，`host_gap=4`，输出 1,584 字与金标准逐字一致（`mismatches=0`）。
@@ -42,5 +42,5 @@ python build.py          # DOCX
 python export_pdf.py     # PDF，需 Word COM（pywin32）
 ```
 
-`build.py` 输出 `30022_uv_KWT1_作品设计报告_LN4优化版.docx`，`export_pdf.py` 更新目录与页码后
-导出同名 PDF。`facts.py` 是唯一数字源，正文通过 `F.CYC_TASK`、`F.TPS_150`、`F.MS_TASK` 派生。
+`build.py` 输出 `KWT1_Technical_Report_LN4.docx`，`export_pdf.py` 更新目录与页码后导出同名 PDF。
+`facts.py` 是唯一数字源，正文通过 `F.CYC_TASK`、`F.TPS_150`、`F.MS_TASK` 派生。

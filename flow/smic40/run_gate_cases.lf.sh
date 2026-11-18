@@ -3,7 +3,7 @@
 #   cases 1..11 (case 0 already verified separately with the same binary)
 #   concurrency = min(nproc, 12); one log per case: c<N>.log
 #   summary: run_status.txt   verdicts: printed at the end
-GS=/home/2026contest/server6/s6_43usr/Desktop/project/out/gate_sim
+GS=/path/to/project/out/gate_sim
 cd "$GS" || { echo "NO_GS $GS"; exit 1; }
 N=$(nproc); [ "$N" -gt 12 ] && N=12
 echo "cores=$(nproc) concurrency=$N start=$(date +%H:%M:%S)"

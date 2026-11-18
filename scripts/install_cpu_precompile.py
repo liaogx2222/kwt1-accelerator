@@ -8,7 +8,7 @@ import signal
 import subprocess
 import time
 
-ROOT=Path('/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112')
+ROOT=Path('/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112')
 DC='/eda/synopsys/dc/dc_2022.03-SP5-5/bin/dc_shell'
 
 

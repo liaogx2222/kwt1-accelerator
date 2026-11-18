@@ -14,47 +14,25 @@ def cover(R: Report):
     for _ in range(2):
         R.spacer(10)
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p.add_run("2026 年全国大学生嵌入式芯片与系统设计竞赛")
-    _set_run_font(r, HEI, HEI, 15, bold=True, color=RGBColor(0, 0, 0))
-    p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p.add_run("芯片设计赛道")
+    r = p.add_run("KWT-1 十二层 Transformer 编码器整数推理加速器")
     _set_run_font(r, HEI, HEI, 15, bold=True, color=RGBColor(0, 0, 0))
     R.spacer(26)
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.style = "Title"
-    r = p.add_run("作品设计报告")
-    _set_run_font(r, HEI, HEI, 34, bold=True, color=RGBColor(0, 0, 0))
+    r = p.add_run("KWT1 Technical Report")
+    _set_run_font(r, "Arial", HEI, 34, bold=True, color=RGBColor(0, 0, 0))
     R.spacer(10)
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p.add_run("KWT-1 十二层 Transformer 编码器整数推理加速器")
+    r = p.add_run("整数 Transformer 加速器设计、SoC 集成与实测")
     _set_run_font(r, HEI, HEI, 15, bold=False, color=RGBColor(0, 0, 0))
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p.add_run("System Bus SoC 集成与整数推理")
-    _set_run_font(r, KAI, KAI, 12, color=RGBColor(0, 0, 0))
-    R.spacer(60)
-
-    items = [("作品名称（必填）：", "KWT-1 十二层 Transformer 编码器整数推理加速器"),
-             ("队伍编号（必填）：", "30022"),
-             ("参赛队名（必填）：", "uv")]
-    t = d.add_table(rows=len(items), cols=2)
-    t.autofit = False
-    for i, (k, v) in enumerate(items):
-        t.rows[i].cells[0].width = Cm(4.2)
-        t.rows[i].cells[1].width = Cm(11.2)
-        c0 = t.rows[i].cells[0]; c0.text = ""
-        p0 = c0.paragraphs[0]; p0.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        r0 = p0.add_run(k)
-        _set_run_font(r0, SONG, SONG, 11.5)
-        c1 = t.rows[i].cells[1]; c1.text = ""
-        p1 = c1.paragraphs[0]; p1.alignment = WD_ALIGN_PARAGRAPH.LEFT
-        r1 = p1.add_run(v if v else "　")
-        _set_run_font(r1, SONG, SONG, 11.5)
-        pPr = p1._p.get_or_add_pPr()
-        pbdr = OxmlElement('w:pBdr'); bt = OxmlElement('w:bottom')
-        bt.set(qn('w:val'), 'single'); bt.set(qn('w:sz'), '6')
-        bt.set(qn('w:space'), '1'); bt.set(qn('w:color'), '1F3B63')
-        pbdr.append(bt); pPr.append(pbdr)
-    R.spacer(40)
+    r = p.add_run("8×16 MAC array · S16/S8/W8 · 512 KiB shared SRAM · E203 subsystem")
+    _set_run_font(r, "Arial", KAI, 12, color=RGBColor(0, 0, 0))
+    # R.spacer 的空段高度由段落标记字号决定，对封面大间距无效，改用显式段前距定位日期
+    gap = d.add_paragraph()
+    gap.paragraph_format.space_before = Pt(360)
+    gap.paragraph_format.space_after = Pt(0)
+    gap.paragraph_format.line_spacing = 1.0
     p = d.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     r = p.add_run("日期：" + F.DATE)
     _set_run_font(r, SONG, SONG, 12)
@@ -68,9 +46,9 @@ def toc(R: Report):
 
 
 def ch1(R: Report):
-    R.h1("1　作品概述", new_page=True)
+    R.h1("1　项目概述", new_page=True)
     R.h2("1.1　任务定义")
-    R.p("赛题要求以 ARM 公开的 KWT-1 预训练权重为唯一模型来源，在 E203 硬件框架上完成十二层 Transformer "
+    R.p("本设计以 ARM 公开的 KWT-1 预训练权重为唯一模型来源，在 E203 硬件框架上完成十二层 Transformer "
         "编码器的加速器设计、SoC 集成、驱动开发与逻辑综合，并在统一评测集上给出精度、吞吐量、功耗与面积。"
         "一次“任务”定义为：完成一次十二层编码器推理，并把 99×64 的最终输出全部写回；"
         "计时从输入与参数开始装载起，到结果全部写回止，任务开始前清空任务数据与参数缓存，"
@@ -89,7 +67,7 @@ def ch1(R: Report):
          ["精度门槛", "相对浮点Top-1准确率下降≤2 pp", "决定定点位宽与非线性近似精度"],
          ["吞吐量口径", "任务数 / 总运行时间，含装载与调度", "装载开销必须与计算重叠"],
          ["功耗口径", "同一计时窗口的 SAIF/VCD，含 CPU/互连/SRAM", "活动信息须覆盖映射网表"]],
-        widths=[3.4, 6.4, 6.4], size=9, cap="赛题硬约束与本设计的应对")
+        widths=[3.4, 6.4, 6.4], size=9, cap="设计约束与本设计的应对")
 
     R.h2("1.3　主要成果").paragraph_format.page_break_before = True
     R.p("表 2 汇总本设计（System Bus v1 r3，计算提交 595724b）的实测结果与达标情况。")
@@ -120,7 +98,7 @@ def ch2(R: Report):
     R.h1("2　系统总体架构", new_page=True)
     R.h2("2.1　平台框架与设计边界")
     R.p("平台由四部分组成：E203 RISC-V 处理器及其 ITCM/DTCM、系统总线与外设、512 KiB 系统共享 SRAM、"
-        "以及参赛队实现的 AI Engine。复用 E203 运算核心与原总线译码，配置 NICE 并修改外层接入；"
+        "以及本设计实现的 AI Engine。复用 E203 运算核心与原总线译码，配置 NICE 并修改外层接入；"
         "新增部分为加速器内核、20 个私有 SRAM 宏、ICB 到加速器的桥（kwt_soc_icb_bridge）、"
         "共享 SRAM 控制器、NICE 块搬运、原总线入口三主仲裁器，以及504 B固定启动ROM。")
     R.table(
@@ -150,7 +128,7 @@ def ch2(R: Report):
     R.figure("fig_soc.png", 15.4, "本设计接入原 System Bus 的供包、块读取与结果写回通路")
 
     R.h2("2.3　CPU 与加速器的分工：从逐字 PIO 到有界块搬运")
-    R.p("分工遵循赛题“必做计算不得由处理器软件代算”的要求，CPU 只做控制与搬移，不做任何模型运算。"
+    R.p("分工遵循“计算不得由处理器软件代算”的设计约束，CPU 只做控制与搬移，不做任何模型运算。"
         "逐字 PIO 需要 189,328 次 store，会占满整个任务窗口；本设计改用 CPU 拥有的有界 NICE 多周期指令："
         "一条指令描述“从共享 SRAM 某地址搬 N 个字到加速器”，"
         "由硬件完成地址递增与握手，CPU 在指令完成前保留包租约，不存在指令结束仍在后台搬运的情况。")

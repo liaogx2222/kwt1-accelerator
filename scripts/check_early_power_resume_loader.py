@@ -20,7 +20,7 @@ def main():
             stage.mkdir(parents=True)
             name='patch_soc_saif_string.py'
             (stage/name).write_bytes((source/name).read_text().encode() if case=='partial_valid' else b'changed')
-        code=loader.replace('/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112',root.as_posix())
+        code=loader.replace('/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112',root.as_posix())
         calls=[]
         with patch('subprocess.check_call',side_effect=lambda command:calls.append(command)):
             try:exec(compile(code,'tested_loader','exec'),{});success=True

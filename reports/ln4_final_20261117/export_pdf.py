@@ -7,7 +7,7 @@ PowerShell 5.1 以 ANSI 读取无 BOM 的 .ps1，中文文件名会乱码，
 import os
 import win32com.client as win32
 
-NAME = "30022_uv_KWT1_作品设计报告_LN4优化版"
+NAME = "KWT1_Technical_Report_LN4"
 BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(BASE, NAME + ".docx")
 DST = os.path.join(BASE, NAME + ".pdf")

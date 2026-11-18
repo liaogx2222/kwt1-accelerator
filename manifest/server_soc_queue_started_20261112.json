@@ -3,7 +3,7 @@
   "observed_stage": "waiting_for_running_input16_DC",
   "stage_entered_UTC": "2026-11-12T11:05:26Z",
   "stage_entered_Asia_Shanghai": "2026-11-12 19:05:26 +08:00",
-  "source": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_parallel_max_20261112_input16_595724b/input16_fast",
+  "source": "/path/to/project/kwt_parallel_max_20261112_input16_595724b/input16_fast",
   "queue_started_on_server": true,
   "source_DC_completion_confirmed": false,
   "platform_mapping_started": false,

@@ -81,4 +81,4 @@ def install(root,capsule):
     print('SOC_LINK_PROBE_STARTED pid='+str(p.pid))
 
 
-if __name__=='__main__':install(Path('/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112'),Path(__file__).resolve().parent)
+if __name__=='__main__':install(Path('/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112'),Path(__file__).resolve().parent)

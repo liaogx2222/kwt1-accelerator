@@ -45,16 +45,16 @@ if {[catch {set power_analysis_mode average} m]} {
 }
 
 set TOP     kwt1_mmio
-set NETLIST /home/2026contest/server6/s6_43usr/Desktop/project/out/dc_synth8/mapped.v
-set SDC     /home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer/flow/targets/smic40.server.sdc
-set SAIF    /home/2026contest/server6/s6_43usr/Desktop/project/out/gate_sim/kwt1_gate_c0.saif
-set OUT     /home/2026contest/server6/s6_43usr/Desktop/project/out/pt_signoff8
+set NETLIST /path/to/project/out/dc_synth8/mapped.v
+set SDC     /path/to/project/server_signoff_20261106/keyword-transformer/flow/targets/smic40.server.sdc
+set SAIF    /path/to/project/out/gate_sim/kwt1_gate_c0.saif
+set OUT     /path/to/project/out/pt_signoff8
 
-set PDK     /home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic
+set PDK     /path/to/project/pdk_extract/SMIC40/S40/smic
 set HVT     $PDK/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v
 set LVT     $PDK/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v
 set RVT     $PDK/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v
-set SRAMDIR /home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40
+set SRAMDIR /path/to/project/lib_smic40
 
 file mkdir $OUT
 

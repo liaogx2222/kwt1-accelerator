@@ -3,9 +3,9 @@
   "source": "user-provided VNC screenshot, manually read; no direct server access",
   "screenshot": "testdata/server_manual_20261111/dc_linked_9a10a73c.png",
   "screenshot_sha256": "668c96a060a78de386565cf1dee38944df6ac1da6826f9e51c9402c0c44477d4",
-  "host": "RDserver06",
-  "account": "s6_43usr",
-  "project": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_v2_ln_4dc49f7_20261111",
+  "host": "server",
+  "account": "shared",
+  "project": "/path/to/project/kwt_v2_ln_4dc49f7_20261111",
   "rtl_revision": "4dc49f7",
   "flow_revision": "524a762",
   "observed": {

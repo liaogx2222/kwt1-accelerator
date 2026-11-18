@@ -77,4 +77,4 @@ def install(root):
 
 
 if __name__=='__main__':
-    install(Path('/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112'))
+    install(Path('/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112'))

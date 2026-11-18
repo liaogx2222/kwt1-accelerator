@@ -27,7 +27,7 @@
 // ===========================================================================
 `timescale 1ns/1ps
 
-`define FIXDIR "/home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer/deliverables/local_port_20261103/fixtures"
+`define FIXDIR "/path/to/project/server_signoff_20261106/keyword-transformer/deliverables/local_port_20261103/fixtures"
 `define HALF   3.333334
 
 module tb_gate_tasks;
@@ -336,7 +336,7 @@ module tb_gate_tasks;
 `ifdef KWT_SAIF
     $toggle_stop;
     // case suffix is mandatory: twelve gate runs share one out/gate_sim dir
-    fn = $sformatf("/home/2026contest/server6/s6_43usr/Desktop/project/out/gate_sim/kwt1_gate_c%0d.saif", case_idx);
+    fn = $sformatf("/path/to/project/out/gate_sim/kwt1_gate_c%0d.saif", case_idx);
     $toggle_report(fn, 1.0e-9, "tb_gate_tasks.dut");
     $display("KWT_SAIF_WRITTEN %0s", fn);
 `endif

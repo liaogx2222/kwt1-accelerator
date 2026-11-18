@@ -51,12 +51,12 @@
 
 set_app_var sh_enable_page_mode false
 
-set REPO    /home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer
-set OUT     /home/2026contest/server6/s6_43usr/Desktop/project/out/dc_synth8
+set REPO    /path/to/project/server_signoff_20261106/keyword-transformer
+set OUT     /path/to/project/out/dc_synth8
 set WRAPPER $REPO/rtl/integration/smic40/kwt_tech_sram_4096x16.sv
 set SDC     $REPO/flow/targets/smic40.server.sdc
-set PDK     /home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic
-set SRAMDIR /home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40
+set PDK     /path/to/project/pdk_extract/SMIC40/S40/smic
+set SRAMDIR /path/to/project/lib_smic40
 set TOP     kwt1_mmio
 set MACREF  *RAMSP4096X16*
 

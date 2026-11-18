@@ -23,7 +23,7 @@ def main():
             str(weight_prefix) + ".index"
         )
 
-    # 从赛题指定目录读取模型训练时保存的参数。
+    # 从设计指定的模型目录读取训练时保存的参数。
     with open(model_dir / "flags.json", "r", encoding="utf-8") as f:
         cfg = json.load(f)
 

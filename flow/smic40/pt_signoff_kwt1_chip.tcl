@@ -44,11 +44,11 @@ set SDC     $ROOT/syn/accel/script/constraints.sdc
 set SAIF    $ROOT/sim/gate/kwt1_gate_c0.saif
 set OUT     $ROOT/sta/report
 
-set PDK     /home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic
+set PDK     /path/to/project/pdk_extract/SMIC40/S40/smic
 set HVT     $PDK/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v
 set LVT     $PDK/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v
 set RVT     $PDK/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v
-set SRAMDIR /home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40
+set SRAMDIR /path/to/project/lib_smic40
 
 file mkdir $OUT
 

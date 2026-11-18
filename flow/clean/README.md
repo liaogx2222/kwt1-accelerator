@@ -8,8 +8,8 @@
 
 ```csh
 python3 flow/project.py check
-setenv KWT_PDK_ROOT /home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic
-setenv KWT_SRAM_DB_DIR /home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40
+setenv KWT_PDK_ROOT /path/to/project/pdk_extract/SMIC40/S40/smic
+setenv KWT_SRAM_DB_DIR /path/to/project/lib_smic40
 python3 flow/project.py preflight
 mkdir -p build
 bash flow/run_sram_contract.sh
@@ -33,7 +33,7 @@ VNC 传输时只上传本工程源文件，禁止覆盖旧工程。可使用导�
 使用源码小包时，在新的空目录接收分段，核对还原的 `source.tar.gz` 后执行 `tar xzf source.tar.gz`。固定输入可从旧工程按哈希导入：
 
 ```csh
-python3 flow/project.py import-fixtures /home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer/deliverables/local_port_20261103/fixtures
+python3 flow/project.py import-fixtures /path/to/project/server_signoff_20261106/keyword-transformer/deliverables/local_port_20261103/fixtures
 ```
 
 这一步只复用已经冻结的输入数据；不会读取旧的 WORK、网表、SAIF 或工具缓存。导入前验证所有文件，目标同名文件哈希不一致时拒绝覆盖。源码包必须先落到一个全新的目录，避免混入历史分段文件。

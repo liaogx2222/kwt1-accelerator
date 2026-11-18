@@ -5,7 +5,7 @@
 
 REV = "LN4 合并版（optimization chain 7a79105）"
 BRANCH = "codex/soc-joint-20261111"
-DATE = "2026 年 11 月 17 日"
+DATE = "2026 年 11 月 18 日"
 
 # ---- 实测周期（12 类完整网络，逐类相同） ----
 # 2026-11-17 实测：Verilator RTL 全 SoC，case 0 冷任务，host_gap=4。

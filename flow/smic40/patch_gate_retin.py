@@ -25,7 +25,7 @@
 # =============================================================================
 import io, os, re, sys
 
-ROOT = "/home/2026contest/server6/s6_43usr/Desktop/project"
+ROOT = "/path/to/project"
 GS   = ROOT + "/out/gate_sim"
 NET  = ROOT + "/out/dc_synth8/mapped.v"
 VM   = "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/verilog/RAMSP4096X16.v"

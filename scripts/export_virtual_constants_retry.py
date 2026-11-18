@@ -32,7 +32,7 @@ b=zlib.decompress(base64.b64decode("""
 %s
 """))
 assert hashlib.sha256(b).hexdigest()=="%s","RETRY_TRANSFER_CHANGED"
-root=Path("/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112")
+root=Path("/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112")
 work=root/"review_tools/soc_virtual_constant_loader_v2"
 assert not work.exists(),"PRESERVE_RETRY_LOADER"
 work.mkdir(parents=True)

@@ -88,7 +88,7 @@ b=zlib.decompress(base64.b64decode("""
 %s
 """))
 assert hashlib.sha256(b).hexdigest()=="%s","RECOVERY_TRANSFER_CHANGED"
-root=Path("/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112")
+root=Path("/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112")
 work=root/"review_tools/soc_recovery_loader_v1"
 assert not work.exists(),"PRESERVE_EXISTING_RECOVERY_LOADER"
 work.mkdir(parents=True)

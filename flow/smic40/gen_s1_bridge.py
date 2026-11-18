@@ -25,7 +25,7 @@ assert DELIM not in tb, "tb_icb_bridge.sv contains '''"
 TEMPLATE = """# -*- coding: utf-8 -*-
 import io, os, sys, stat
 
-ROOT = os.environ.get("KWT1_CHIP", "/home/2026contest/server6/s6_43usr/Desktop/project/kwt1_chip")
+ROOT = os.environ.get("KWT1_CHIP", "/path/to/project/kwt1_chip")
 if not os.path.isdir(ROOT):
     print("MISS_ROOT", ROOT)
     sys.exit(1)

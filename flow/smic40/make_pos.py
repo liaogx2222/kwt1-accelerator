@@ -1,5 +1,5 @@
 import io
-p = "/home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer/rtl/integration/smic40/kwt_tech_sram_4096x16.sv"
+p = "/path/to/project/server_signoff_20261106/keyword-transformer/rtl/integration/smic40/kwt_tech_sram_4096x16.sv"
 s = io.open(p, encoding="utf-8").read()
 N = chr(10)
 # RETIRED 2026-11-07: this script was used once to introduce the positional

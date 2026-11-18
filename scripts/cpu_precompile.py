@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 import sys
 
-ROOT=Path('/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112')
+ROOT=Path('/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112')
 
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

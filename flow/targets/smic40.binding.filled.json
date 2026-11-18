@@ -76,12 +76,12 @@
       "capacitance_unit": "1pf",
       "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_ss_0p99v_0p99v_125c.lib",
       "standard_cell_liberty": [
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_ss_v0p99_125c_basic.db",
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_ss_v0p99_125c_basic.db",
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db"
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_ss_v0p99_125c_basic.db",
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_ss_v0p99_125c_basic.db",
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ss_v0p99_125c_basic.db"
       ],
       "sram_liberty": [
-        "/home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40/RAMSP4096X16_ss_0p99v_0p99v_125c.db"
+        "/path/to/project/lib_smic40/RAMSP4096X16_ss_0p99v_0p99v_125c.db"
       ]
     },
     {
@@ -93,12 +93,12 @@
       "capacitance_unit": "1pf",
       "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_ff_1p21v_1p21v_m40c.lib",
       "standard_cell_liberty": [
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_ff_v1p21_-40c_basic.db",
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_ff_v1p21_-40c_basic.db",
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ff_v1p21_-40c_basic.db"
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_ff_v1p21_-40c_basic.db",
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_ff_v1p21_-40c_basic.db",
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_ff_v1p21_-40c_basic.db"
       ],
       "sram_liberty": [
-        "/home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40/RAMSP4096X16_ff_1p21v_1p21v_m40c.db"
+        "/path/to/project/lib_smic40/RAMSP4096X16_ff_1p21v_1p21v_m40c.db"
       ]
     },
     {
@@ -110,12 +110,12 @@
       "capacitance_unit": "1pf",
       "source": "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_tt_1p10v_1p10v_25c.lib",
       "standard_cell_liberty": [
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_tt_v1p1_25c_basic.db",
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_tt_v1p1_25c_basic.db",
-        "/home/2026contest/server6/s6_43usr/Desktop/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_tt_v1p1_25c_basic.db"
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_HVT_V0.1/SCC40NLL_VHSC40_HVT_V0p1/liberty/1.1v/scc40nll_vhsc40_hvt_tt_v1p1_25c_basic.db",
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_LVT_V0.1/SCC40NLL_VHSC40_LVT_V0p1/liberty/1.1v/scc40nll_vhsc40_lvt_tt_v1p1_25c_basic.db",
+        "/path/to/project/pdk_extract/SMIC40/S40/smic/SCC40NLL_VHSC40_RVT_V0.1/SCC40NLL_VHSC40_RVT_V0p1/liberty/1.1v/scc40nll_vhsc40_rvt_tt_v1p1_25c_basic.db"
       ],
       "sram_liberty": [
-        "/home/2026contest/server6/s6_43usr/Desktop/project/lib_smic40/RAMSP4096X16_tt_1p10v_1p10v_25c.db"
+        "/path/to/project/lib_smic40/RAMSP4096X16_tt_1p10v_1p10v_25c.db"
       ]
     }
   ],

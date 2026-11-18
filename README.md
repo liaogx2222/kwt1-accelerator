@@ -4,7 +4,7 @@ KWT-1 是一颗面向关键词识别（Keyword Spotting）的整数 Transformer 
 
 工程派生自 ARM 官方 [Keyword Transformer](https://github.com/ARM-software/keyword-transformer)（Apache 2.0），沿用其模型与训练流程；加速器、总线与整机集成部分为本项目新增。上游 README 保留于 [`README_upstream.md`](README_upstream.md)。
 
-本设计面向 2026 年全国大学生嵌入式芯片与系统设计竞赛芯片设计赛道。
+设计目标：在 SMIC 40 nm、150 MHz 下，以 512 KiB 系统共享 SRAM、无片外存储的约束完成十二层编码器推理，新增面积不超过 2.25 mm²，精度相对浮点下降不超过 2 pp。
 
 ---
 

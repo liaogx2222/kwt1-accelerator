@@ -1,6 +1,6 @@
 import io, glob, re
 lib = "/storage1/admin_public_dir/SRAM_Lib_2025/RAMSP4096X16/lib/RAMSP4096X16_ss_0p99v_0p99v_125c.lib"
-p   = "/home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer/rtl/integration/smic40/kwt_tech_sram_4096x16.sv"
+p   = "/path/to/project/server_signoff_20261106/keyword-transformer/rtl/integration/smic40/kwt_tech_sram_4096x16.sv"
 N = chr(10)
 hits = glob.glob(lib)
 if not hits:

@@ -35,7 +35,7 @@
 // =============================================================================
 `timescale 1ns/1ps
 
-`define FIXDIR "/home/2026contest/server6/s6_43usr/Desktop/project/server_signoff_20261106/keyword-transformer/deliverables/local_port_20261103/fixtures"
+`define FIXDIR "/path/to/project/server_signoff_20261106/keyword-transformer/deliverables/local_port_20261103/fixtures"
 
 module tb_soc;
 

@@ -105,7 +105,7 @@ def main():
             name="kwt1_sequence_reference"
         )
 
-        # 初始化并显式加载赛题指定的 best_weights
+        # 初始化并显式加载设计指定的 best_weights
         sess.run(tf.global_variables_initializer())
         status = model.load_weights(CKPT)
         status.assert_existing_objects_matched()

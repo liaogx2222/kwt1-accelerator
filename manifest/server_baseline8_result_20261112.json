@@ -1,6 +1,6 @@
 {
   "source": "user screenshots 2026-11-12",
-  "server_project": "/home/2026contest/server6/s6_43usr/Desktop/project/kwt_parallel_max_20261112_7b22f70_r1/baseline8",
+  "server_project": "/path/to/project/kwt_parallel_max_20261112_7b22f70_r1/baseline8",
   "flow_revision": "7b22f70bb6d6b0effbbc0df8cf8e280c25091ae0",
   "RTL_revision": "2b2dc171a1601d955609bc65db1ca4b00ff0c7a1",
   "source_files": 64,

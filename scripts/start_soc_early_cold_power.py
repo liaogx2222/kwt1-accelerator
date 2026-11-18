@@ -11,7 +11,7 @@ import subprocess
 import sys
 import time
 
-SERVER_ROOT='/home/2026contest/server6/s6_43usr/Desktop/project/kwt_soc_input16_metrics_595724b_tt_20261112'
+SERVER_ROOT='/path/to/project/kwt_soc_input16_metrics_595724b_tt_20261112'
 PT='/eda/synopsys/prime/prime_2022.03-SP5-1/bin/pt_shell'
 
 
